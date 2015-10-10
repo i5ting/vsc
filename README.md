@@ -4,6 +4,18 @@
 
 今天来了兴致，推荐一下，希望有更多的同学来使用这个编辑器。
 
+## 介绍
+
+vsc的宣传语是：
+
+     一个运行于 Mac OS X、Windows和 Linux 之上的，针对于编写现代 Web 和云应用的跨平台源代码编辑器。
+
+按它说的，vsc特别适合来作为前端开发编辑器。
+
+内置html开发神器emmet(zencoding),对css及其相关编译型语言Less和Sass都有很好的支持。
+
+当然，最nice的还是写js代码了，这也是我接下来要着重介绍的功能。
+
 ## 特性
 
 - Free但不开源
@@ -121,7 +133,17 @@ working files是已打开的所有文件，如果此时点击右上角的分屏�
 - [git-guide](http://www.bootcss.com/p/git-guide/)
 - [git入门gif演示](https://git.oschina.net/wzw/git-quick-start)
 
-### Debug
+### Debug（感谢hellopao）
+
+使用方法也很简单,步骤如下：
+
+- 打开要调试的文件，按f5,编辑器会生成一个launch.json
+- 修改launch.json相关内容，主要是name和program字段，改成和你项目对应的
+- 点击编辑器左侧长得像蜘蛛的那个按钮
+- 点击左上角DEBUG后面的按钮，启动调试
+- 打断点，尽情调试（只要你会chrome调试，一模一样）
+
+![](img/2.gif)
 
 
 ## 实例
@@ -236,34 +258,151 @@ cd '/Users/sang/workspace/github/vsc-doc'; env 'NODE_ENV=development'   'node' '
 Debugger listening on port 44412
 ```
 
+其实node-inspector也是这个原理的。
+
 ### 增加断点
 
 ![](img/9.png)
 
-## 自动补全
+### 此时访问
 
-首先Visual Studio Code的自动补全用的是tsd。
+```
+curl http://127.0.0.1:3200/
+```
+
+### 进入调试界面
+
+![](img/10.png)
+
+和chrome的调试是一样的。
+
+点击1）处按钮，打开控制台，配合调试，在控制台里查看对应的变量值
+
+另外值得说明的是二级菜单里4个部分
+
+- a）variables变量
+- b）watch观察
+- c）call stack 调用栈
+- d）break points 断点
+
+它和chrome的调试也是一样的，此处就不多讲了。
+
+
+### 更多
+
+- [node-debug 三法三例之node debugger + node inspector](https://cnodejs.org/topic/5463f6e872f405c829029f7e)
+- [node-inspector视频](http://i5ting.github.io/nodejs-video/node-inspector.mov)
+- [node-debug视频](http://i5ting.github.io/nodejs-video/node-debug.mov)
+
+## 自动补全(智能提示)
+
+因为之前微软推出了typescript语言，结合tsd文件，用visual studio写typescript代码是相当爽的，智能提示的功能非常nb。
+
+这个功能理所应当也被vsc继承了。
+
+vsc的自动补全用的是tsd。
+
+TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.
 
 https://github.com/DefinitelyTyped/tsd
+
+目前主流的前端类库/框架，包括node.js及其模块/框架都有相应的tsd文件，可以去[DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped)上找一下。
+
 
 那么就可以安装tsd之后，使用
 
 ```
-  npm install tsd -g
-  # cd to your project folder
-  tsd query -r -o -a install angular express
+npm install tsd -g
+cd vsc-doc
+tsd query -r -o -a install express
 ```
 
-然后再就在reference中添加就可以了。
+此时看一下当前目录，下面的express.d.ts文件即是具体提示用的。
+
+
+```
+typings/express/express.d.ts
+```
 
 在代码编辑区里，输入CTRL+SPACE就可以有提示了。
 
+![](img/15.png)
 
 目前node.d.ts版本还是0.12.0，和node v4的api差不了多少
 
 
-## 快捷键
+
+## 自定义快捷键
+
+但是CTRL+SPACE在我的电脑里已经占用了，所以还是需要修改一下的，见下图
+
+打开快捷键配置
+
+![](img/11.png)
+
+修改如下
+
+![](img/12.png)
+
+
+即把
+
+```
+// Place your key bindings in this file to overwrite the defaults
+[
+	{ "key": "ctrl+space",            "command": "editor.action.triggerSuggest",
+                                     "when": "editorTextFocus" }
+]
+```
+
+改成
+
+```
+// Place your key bindings in this file to overwrite the defaults
+[
+	{ "key": "shift+space",            "command": "editor.action.triggerSuggest",
+                                     "when": "editorTextFocus" }
+]
+```
+
+此时，就是输入SHIFT+SPACE就可以有提示了
+
+## 快捷键(默认)
 
 - 自动补全    command + SPACE
 - 快速打开文件 command + o
-- 快速定位文件 command + t
+- 快速定位文件 command + p
+
+## 自定义主题
+
+打开主题配置
+
+![](img/13.png)
+
+选一个自己喜欢的主题吧
+
+![](img/14.png)
+
+
+## Node API 查看（感谢hellopao）
+
+在写node.js代码的时候，有时会忘记某个模块中有哪些方法及其用法，经常要去官网翻一下api文档。
+
+这里介绍下怎么使用vsc来搞定这一问题。
+
+1. 打开vsc控制台（Help > Toggle Developer Tools > Console）
+1. 在控制台写代码，查询模块方法。
+
+过程如下图：
+
+![](img/1.gif)
+
+vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在叫nw.js）一样，都是把node.js和chrome结合起来的工具，所以可以这么使用。
+
+不过vsc使用到的node.js模块并不多，比如引用util和vm等会报错，用node-webkit就不会这样。
+
+## 结语
+
+vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。
+
+推荐使用~
