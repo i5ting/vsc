@@ -480,7 +480,11 @@ vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在�
 
 ## 缓存文件
 
+按照一般app的设计，都是主应用，和用户目录下的缓存文件，把用户自定义的或使用生成的文件都放到缓存文件目录里。鉴于此，我们来找找code.app的缓存文件，或许能发现点有用的东西
+
 ### 缓存目录详情
+
+目录是 `/Users/sang/Library/Application Support/Code` 
 
 ```
 ➜  Code  pwd
@@ -516,7 +520,13 @@ vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在�
 8 directories, 17 files
 ```
 
+这些文件我们能看懂的就尽量看，看不懂的也无所谓，如果想深度了解里面的机制，还是有必要看看的。
+
 ### storage.json
+
+storage.json是code.app的核心配置文件，就像npm里的package.json一样。
+
+看一下具体内容
 
 ```
 ➜  Code  cat storage.json 
@@ -569,6 +579,7 @@ vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在�
 剩下的自己发挥吧
 
 ### 当前用户配置
+
 上面的目录结构基本都可以看懂，对应当前用户来说
 
 ```
@@ -636,6 +647,10 @@ User/snippets/javascript.json
 - "prefix" 是用户输入的字母，比如本例中输入log自动提示
 - 当用户触发此snippet的时候，会按照"body"里代码生成
 - $1代表光标位置
+
+自己按照上面的方法定义自己的snippets，可以提高很多工作效率哦
+
+下面看一下如何在代码中使用snippet，如图
 
 ![](img/17.png)
 
