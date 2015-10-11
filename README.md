@@ -21,7 +21,8 @@ vsc的宣传语是：
 - Free但不开源
 - Build（构建）和 debug（调试） 现代web和云应用(尤其是JavaScript、TypeScript、C#、ASP.NET v5 和 Nodejs)
 - 跨平台支持Linux, Mac OSX, and Windows
-- 支持语法提示
+- 支持语法自动补全，智能提示
+- 内置html开发神器emmet
 - 速度非常快
 - 支持多主题（配色方案）
 
@@ -102,7 +103,7 @@ git checkout 输入git分支名
 
 ## 主菜单说明
 
-### Explore（探索）
+### Explore
 
 这个菜单主要是对文件夹和文件的管理
 
@@ -133,7 +134,7 @@ working files是已打开的所有文件，如果此时点击右上角的分屏�
 - [git-guide](http://www.bootcss.com/p/git-guide/)
 - [git入门gif演示](https://git.oschina.net/wzw/git-quick-start)
 
-### Debug（感谢hellopao）
+### Debug
 
 使用方法也很简单,步骤如下：
 
@@ -147,6 +148,8 @@ working files是已打开的所有文件，如果此时点击右上角的分屏�
 
 
 ## 实例
+
+通过创建express项目构建，调试来演示vsc的具体用法
 
 ### 创建express项目
 
@@ -396,8 +399,36 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 
 ![](img/14.png)
 
+## html开发神器emmet（Zen coding）
 
-## Node API 查看（感谢hellopao）
+举个简单例子，在index.html里
+
+输入link，然后tab键，就会生成下面的代码
+
+```
+<link rel="stylesheet" href="">
+```
+
+
+连续输入类和id，比如p.bar#foo，会自动生成： 
+
+```
+<p class="bar" id="foo"></p>  
+```
+
+输入h1{foo}和a[href=#]，就可以自动生成如下代码：
+
+```
+<h1>foo</h1>  
+<a href="#"></a>  
+```
+
+写html代码足够快了，享受吧，更多用法见 
+
+- http://www.iteye.com/news/27580
+- http://docs.emmet.io/
+
+## Node API 查看
 
 在写node.js代码的时候，有时会忘记某个模块中有哪些方法及其用法，经常要去官网翻一下api文档。
 
