@@ -154,7 +154,8 @@
 <li>Free但不开源</li>
 <li>Build（构建）和 debug（调试） 现代web和云应用(尤其是JavaScript、TypeScript、C#、ASP.NET v5 和 Nodejs)</li>
 <li>跨平台支持Linux, Mac OSX, and Windows</li>
-<li>支持语法提示</li>
+<li>支持语法自动补全，智能提示</li>
+<li>内置html开发神器emmet</li>
 <li>速度非常快</li>
 <li>支持多主题（配色方案）</li>
 </ul>
@@ -232,7 +233,7 @@
 
 <h2>主菜单说明</h2>
 
-<h3>Explore（探索）</h3>
+<h3>Explore</h3>
 
 <p>这个菜单主要是对文件夹和文件的管理</p>
 
@@ -265,7 +266,7 @@
 <li><a href="https://git.oschina.net/wzw/git-quick-start">git入门gif演示</a></li>
 </ul>
 
-<h3>Debug（感谢hellopao）</h3>
+<h3>Debug</h3>
 
 <p>使用方法也很简单,步骤如下：</p>
 
@@ -280,6 +281,8 @@
 <p><img src="img/2.gif" alt=""></p>
 
 <h2>实例</h2>
+
+<p>通过创建express项目构建，调试来演示vsc的具体用法</p>
 
 <h3>创建express项目</h3>
 <div class="highlight"><pre><span class="err">➜</span><span class="w">  </span><span class="vg">examples</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">express</span><span class="w"> </span><span class="vg">helloworld</span>
@@ -471,6 +474,14 @@
 </pre></div>
 <p>此时，就是输入SHIFT+SPACE就可以有提示了</p>
 
+<p>原理说明：我们可以看到2个配置文件，一个是不能修改的，另一个是空的，后面的会把前面的覆盖</p>
+
+<p>这其实和<a href="http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html#10501">jquery插件里的配置项</a>原理是类似的</p>
+<div class="highlight"><pre><span class="c1">// 将defaults 和 options 参数合并到{}</span>
+<span class="k">var</span> <span class="n">opts</span> <span class="o">=</span> <span class="err">$</span><span class="p">.</span><span class="n">extend</span><span class="p">({},</span><span class="err">$</span><span class="p">.</span><span class="n">fn</span><span class="p">.</span><span class="n">tab</span><span class="p">.</span><span class="n">defaults</span><span class="p">,</span><span class="n">options</span><span class="p">);</span>
+</pre></div>
+<p>把options里的覆盖$.fn.tab.defaults。</p>
+
 <h2>快捷键(默认)</h2>
 
 <ul>
@@ -489,7 +500,28 @@
 
 <p><img src="img/14.png" alt=""></p>
 
-<h2>Node API 查看（感谢hellopao）</h2>
+<h2>html开发神器emmet（Zen coding）</h2>
+
+<p>举个简单例子，在index.html里</p>
+
+<p>输入link，然后tab键，就会生成下面的代码</p>
+<div class="highlight"><pre><span class="o">&lt;</span><span class="vg">link</span><span class="w"> </span><span class="vg">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span><span class="w"> </span><span class="vg">href</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="o">&gt;</span>
+</pre></div>
+<p>连续输入类和id，比如p.bar#foo，会自动生成： </p>
+<div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;bar&quot;</span> <span class="na">id=</span><span class="s">&quot;foo&quot;</span><span class="nt">&gt;&lt;/p&gt;</span>  
+</pre></div>
+<p>输入h1{foo}和a[href=#]，就可以自动生成如下代码：</p>
+<div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>foo<span class="nt">&lt;/h1&gt;</span>  
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>  
+</pre></div>
+<p>写html代码足够快了，享受吧，更多用法见 </p>
+
+<ul>
+<li>http://www.iteye.com/news/27580</li>
+<li>http://docs.emmet.io/</li>
+</ul>
+
+<h2>Node API 查看</h2>
 
 <p>在写node.js代码的时候，有时会忘记某个模块中有哪些方法及其用法，经常要去官网翻一下api文档。</p>
 
