@@ -516,6 +516,59 @@ vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在�
 8 directories, 17 files
 ```
 
+### storage.json
+
+```
+➜  Code  cat storage.json 
+{
+    "updateChannel": "stable",
+    "windowUIState": {
+        "width": 1280,
+        "height": 773,
+        "mode": 1,
+        "x": 0,
+        "y": 23
+    },
+    "openedPathsList": {
+        "folders": [],
+        "files": [
+            "/Users/sang/Library/Application Support/Code/User/snippets/javascript.json",
+            "/Users/sang/workspace/github/vsc-doc/typings/node/node.d.ts",
+            "/Users/sang/workspace/github/vsc-doc",
+            "/Users/sang/workspace/github/vsc/index.js",
+            "/Users/sang/workspace/moa/rate-cache",
+            "/Users/sang/workspace/aircos/aircos-plugins",
+            "/Users/sang/workspace/github/vsc",
+            "/Users/sang/test/go",
+            "/Users/sang/test/go/views"
+        ]
+    },
+    "theme": "vs",
+    "folderPickerWorkingDir": "/Users/sang/workspace/moa",
+    "lastActiveOpenedPath": "/Users/sang/workspace/github/vsc-doc"
+}% 
+```
+
+说明
+
+- updateChannel 应该检查版本更新的设置
+- windowUIState 界面状态，还记得分割编辑窗口吧？
+- openedPathsList 应该是File -> Open Recent里的内容
+- theme 用户配色方案
+- folderPickerWorkingDir 执行command + o 打开的目录
+- lastActiveOpenedPath   最后打开的目录（这个目录是我执行vsc直接打开的）
+
+为什么要了解它呢？
+
+如果你理解了上面的配置起什么作用，那么你是不是可以干很多坏事儿呢？比如
+
+- 备份
+- 可视化
+- 其他hack
+
+剩下的自己发挥吧
+
+### 当前用户配置
 上面的目录结构基本都可以看懂，对应当前用户来说
 
 ```
