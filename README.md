@@ -639,6 +639,452 @@ User/snippets/javascript.json
 
 ![](img/17.png)
 
+## 庖丁解牛code.app
+
+app的安装目录是 `/Applications/Visual\ Studio\ Code.app`,右键show package content，然后一层一层的找里面的内容就可以了
+
+```
+/Applications/Visual\ Studio\ Code.app/Contents/Resources
+```
+
+下面我们来看一下里面的内容
+
+```
+➜  Resources  pwd
+/Applications/Visual Studio Code.app/Contents/Resources
+➜  Resources  tree . -L 3
+.
+├── Code.icns
+├── Credits.rtf
+├── app
+│   ├── Credits_43.0.2357.65.html
+│   ├── ThirdPartyNotices.txt
+│   ├── license.txt
+│   ├── node_modules
+│   │   ├── applicationinsights
+│   │   ├── chokidar
+│   │   ├── emmet
+│   │   ├── first-mate
+│   │   ├── getmac
+│   │   ├── graceful-fs
+│   │   ├── http-proxy-agent
+│   │   ├── https-proxy-agent
+│   │   ├── iconv-lite
+│   │   ├── sax
+│   │   ├── semver
+│   │   └── winreg
+│   ├── out
+│   │   ├── bootstrap.js
+│   │   └── vs
+│   ├── package.json
+│   ├── plugins
+│   │   ├── declares.d.ts
+│   │   ├── lib.core.d.ts
+│   │   ├── node.d.ts
+│   │   ├── tsconfig.json
+│   │   ├── vs.debug.mono
+│   │   ├── vs.debug.node
+│   │   ├── vs.language.bat
+│   │   ├── vs.language.clojure
+│   │   ├── vs.language.coffeescript
+│   │   ├── vs.language.cpp
+│   │   ├── vs.language.csharp
+│   │   ├── vs.language.csharp.o
+│   │   ├── vs.language.css
+│   │   ├── vs.language.dockerfile
+│   │   ├── vs.language.fsharp
+│   │   ├── vs.language.go
+│   │   ├── vs.language.groovy
+│   │   ├── vs.language.html
+│   │   ├── vs.language.ini
+│   │   ├── vs.language.jade
+│   │   ├── vs.language.java
+│   │   ├── vs.language.javascript
+│   │   ├── vs.language.lua
+│   │   ├── vs.language.makefile
+│   │   ├── vs.language.markdown
+│   │   ├── vs.language.objective-c
+│   │   ├── vs.language.perl
+│   │   ├── vs.language.php
+│   │   ├── vs.language.powershell
+│   │   ├── vs.language.python
+│   │   ├── vs.language.r
+│   │   ├── vs.language.ruby
+│   │   ├── vs.language.rust
+│   │   ├── vs.language.shellscript
+│   │   ├── vs.language.swift
+│   │   ├── vs.language.tsql
+│   │   ├── vs.language.typescript
+│   │   ├── vs.language.vb
+│   │   ├── vs.language.xml
+│   │   ├── vs.language.yaml
+│   │   ├── vs.linter.eslint
+│   │   ├── vs.linter.jshint
+│   │   └── vs.theme.starterkit
+│   └── vso.png
+├── atom.asar
+├── en.lproj
+├── en_GB.lproj
+├── file.icns
+├── zh_CN.lproj
+└── zh_TW.lproj
+
+60 directories, 14 files
+```
+
+
+### 依赖的模块
+
+```
+│   ├── node_modules
+│   │   ├── applicationinsights
+│   │   ├── chokidar
+│   │   ├── emmet
+│   │   ├── first-mate
+│   │   ├── getmac
+│   │   ├── graceful-fs
+│   │   ├── http-proxy-agent
+│   │   ├── https-proxy-agent
+│   │   ├── iconv-lite
+│   │   ├── sax
+│   │   ├── semver
+│   │   └── winreg
+```
+
+### 插件
+
+```
+│   ├── plugins
+│   │   ├── declares.d.ts
+│   │   ├── lib.core.d.ts
+│   │   ├── node.d.ts
+│   │   ├── tsconfig.json
+│   │   ├── vs.debug.mono
+│   │   ├── vs.debug.node
+│   │   ├── vs.language.bat
+│   │   ├── vs.language.clojure
+│   │   ├── vs.language.coffeescript
+│   │   ├── vs.language.cpp
+│   │   ├── vs.language.csharp
+│   │   ├── vs.language.csharp.o
+│   │   ├── vs.language.css
+│   │   ├── vs.language.dockerfile
+│   │   ├── vs.language.fsharp
+│   │   ├── vs.language.go
+│   │   ├── vs.language.groovy
+│   │   ├── vs.language.html
+│   │   ├── vs.language.ini
+│   │   ├── vs.language.jade
+│   │   ├── vs.language.java
+│   │   ├── vs.language.javascript
+│   │   ├── vs.language.lua
+│   │   ├── vs.language.makefile
+│   │   ├── vs.language.markdown
+│   │   ├── vs.language.objective-c
+│   │   ├── vs.language.perl
+│   │   ├── vs.language.php
+│   │   ├── vs.language.powershell
+│   │   ├── vs.language.python
+│   │   ├── vs.language.r
+│   │   ├── vs.language.ruby
+│   │   ├── vs.language.rust
+│   │   ├── vs.language.shellscript
+│   │   ├── vs.language.swift
+│   │   ├── vs.language.tsql
+│   │   ├── vs.language.typescript
+│   │   ├── vs.language.vb
+│   │   ├── vs.language.xml
+│   │   ├── vs.language.yaml
+│   │   ├── vs.linter.eslint
+│   │   ├── vs.linter.jshint
+│   │   └── vs.theme.starterkit
+```
+
+很多人抱怨，vsc没有提供插件机制，想想还是笑笑吧，机制已经很健全了，开放只是早晚的事儿。
+
+### out目录
+
+out是一个比较有趣的目录，所有代码都是混淆过的，但可以从其文件名和目录名称看出一些东西
+
+```
+➜  out  pwd
+/Applications/Visual Studio Code.app/Contents/Resources/app/out
+➜  out  tree . -L 3
+.
+├── bootstrap.js
+└── vs
+    ├── base
+    │   ├── browser
+    │   ├── common
+    │   ├── node
+    │   ├── parts
+    │   └── worker
+    ├── css.js
+    ├── editor
+    │   ├── browser
+    │   ├── common
+    │   ├── contrib
+    │   └── css
+    ├── languages
+    │   ├── annotatedLanguage
+    │   ├── csharp
+    │   ├── css
+    │   ├── handlebars
+    │   ├── html
+    │   ├── javascript
+    │   ├── json
+    │   ├── less
+    │   ├── lib
+    │   ├── markdown
+    │   ├── php
+    │   ├── plaintext
+    │   ├── razor
+    │   ├── sass
+    │   ├── typescript
+    │   ├── typescript.workbench
+    │   └── vsxml
+    ├── loader.js
+    ├── nls.js
+    ├── text.js
+    └── workbench
+        ├── browser
+        ├── electron-browser
+        ├── electron-main
+        ├── parts
+        ├── services
+        ├── workbench.main.css
+        ├── workbench.main.js
+        ├── workbench.main.nls.js
+        └── workbench.main.nls.keys.js
+
+36 directories, 9 files
+```
+
+bootstrap.js是启动的脚本
+
+
+默认支持的语言
+
+- annotatedLanguage
+- csharp
+- css
+- handlebars
+- html
+- javascript
+- json
+- less
+- markdown
+- php
+- plaintext
+- razor
+- sass
+- typescript
+- vsxml
+
+vs/base/browser/ui/是界面里用的svg图，如果想自定义界面可以自行修改
+
+vs/base/node/terminateProcess.sh写的不错
+
+```
+#!/bin/bash
+
+terminateTree() {
+    for cpid in $(pgrep -P $1); do
+        terminateTree $cpid
+    done
+    kill -9 $1 > /dev/null 2>&1
+}
+
+for pid in $*; do
+    terminateTree $pid
+done
+```
+
+
+/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/editor/css是编辑器vs-theme.css样式
+
+
+/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/browser/css是workbench的vs-theme.css样式
+
+### ThirdPartyNotices.txt
+
+看看它依赖的第三方开源模块
+
+```
+1.	amdefine version 1.0.0 (https://github.com/jrburke/amdefine)
+2.	anymatch version 1.3.0 (https://github.com/es128/anymatch)
+3.	App Insights for Node.js version 0.15.5 (https://github.com/Microsoft/ApplicationInsights-node.js/tree/master)
+4.	array-slice version 0.2.3 (https://github.com/jonschlinkert/array-slice)
+5.	arr-diff version 1.0.1 (https://github.com/jonschlinkert/arr-diff/tree/1.0.1)
+6.	arrify version 1.0.0 (https://github.com/sindresorhus/arrify)
+7.	Async-each version 0.1.6 (https://github.com/paulmillr/async-each)
+8.	atom-brightray (https://github.com/atom/brightray)
+9.	binary-extensions version 1.3.1 (https://github.com/sindresorhus/binary-extensions)
+10.	braces version 1.8.0 (https://github.com/jonschlinkert/braces)
+11.	chjj-marked version 0.3.2 (https://github.com/npmcomponent/chjj-marked)
+12.	chokidar version 1.0.0 (https://github.com/paulmillr/chokidar)
+13.	chromium version 43.0.2357.65 (http://www.chromium.org/Home)
+14.	Colorsublime-Themes version 0.1.0 (https://github.com/Colorsublime/Colorsublime-Themes)
+15.	Core-util-is version 1.0.1 (https://github.com/isaacs/core-util-is/)
+16.	debug version 2.2.0 (https://github.com/visionmedia/debug)
+17.	debug version 1.0.4 (https://github.com/visionmedia/debug)
+18.	debugger-libs version 9.0.21022 (https://github.com/mono/debugger-libs)
+19.	electron version 0.27.3 (https://github.com/atom/electron)
+20.	emmet version 1.3.1 (https://github.com/emmetio/emmet)
+21.	expand-brackets version 0.1.1 (https://github.com/jonschlinkert/expand-brackets)
+22.	expand-range version 1.8.1 (https://github.com/jonschlinkert/expand-range)
+23.	Extract-opts version 2.2.0 (https://github.com/bevry/extract-opts)
+24.	filename-regex version 2.0.0 (https://github.com/regexps/filename-regex)
+25.	fill-range version 2.2.2 (https://github.com/jonschlinkert/fill-range)
+26.	firstmate (alexandrudima) version 4.1.7 (https://github.com/alexandrudima/first-mate)
+27.	for-in version 0.1.4 (https://github.com/jonschlinkert/for-in)
+28.	for-own version 0.1.3 (https://github.com/jonschlinkert/for-own)
+29.	fsevents version 0.3.6 (https://github.com/strongloop/fsevents)
+30.	getmac version 1.0.7 (https://github.com/bevry/getmac)
+31.	glob-base version 0.2.0 (https://github.com/jonschlinkert/glob-base)
+32.	glob-parent version 1.2.0 (https://github.com/es128/glob-parent)
+33.	graceful-fs version 4.1.2 (https://github.com/isaacs/node-graceful-fs)
+34.	http-proxy-agent version 0.2.6 (https://github.com/TooTallNate/node-http-proxy-agent)
+35.	https-proxy-agent version 0.3.5 (https://github.com/TooTallNate/node-https-proxy-agent)
+36.	iconv-lite version 0.4.10 (https://github.com/ashtuchkin/iconv-lite)
+37.	Inherits version 2.0.1 (https://github.com/isaacs/inherits)
+38.	Isarray version 0.0.1 (https://github.com/juliangruber/isarray)
+39.	is-binary-path version 1.0.1 (https://github.com/sindresorhus/is-binary-path)
+40.	is-dotfile version 1.0.1 (ttps://github.com/jonschlinkert/is-dotfile)
+41.	Is-equal-shallow version 0.1.2 (https://github.com/jonschlinkert/is-equal-shallow)
+42.	is-extglob version 1.0.0 (https://github.com/jonschlinkert/is-extglob)
+43.	is-glob version 1.1.3 (https://github.com/jonschlinkert/is-glob)
+44.	is-number version 1.1.2 (https://github.com/jonschlinkert/is-number)
+45.	isobject version 1.0.0 (https://github.com/jonschlinkert/isobject)
+46.	isobject version 0.2.0 (https://github.com/jonschlinkert/isobject)
+47.	Is-primitive version 1.0.0 (https://github.com/jonschlinkert/is-primitive)
+48.	Is-primitive version 2.0.0 (https://github.com/jonschlinkert/is-primitive)
+49.	issrc (Inno Setup) version 5.5.6 (https://github.com/jrsoftware/issrc)
+50.	jsbeautifer version 1.5.10 (https://github.com/beautify-web/js-beautify)
+51.	kind-of version 1.1.0 (https://github.com/jonschlinkert/kind-of)
+52.	language-closure version 0.16.0 (https://github.com/atom/language-clojure)
+53.	language-groovy version 0.4.0 (https://github.com/Jakehp/language-groovy)
+54.	language-make version 0.17.0 (https://github.com/atom/language-make)
+55.	language-perl version 0.28.0 (https://github.com/atom/language-perl)
+56.	language-php version 0.29.0 (https://github.com/atom/language-php)
+57.	language-rust version 0.4.4 (https://github.com/zargony/atom-language-rust)
+58.	language-shellscript version 0.15.0 (https://github.com/atom/language-shellscript)
+59.	language-yaml version 0.24.0 (https://github.com/atom/language-yaml)
+60.	Libchromiumcontent version 43.0.2357.65 (https://github.com/atom/libchromiumcontent)
+61.	Lru-cache version 2.6.4 (https://github.com/isaacs/node-lru-cache)
+62.	micromatch version 2.1.6 (https://github.com/jonschlinkert/micromatch/tree/2.1.5)
+63.	minimatch version 0.2.14 (https://github.com/isaacs/minimatch)
+64.	ms version 0.7.1 (https://github.com/rauchg/ms.js)
+65.	ms.js version 0.6.2 (https://github.com/rauchg/ms.js)
+66.	nan version 1.8.4 (https://github.com/iojs/nan)
+67.	newtonsoft.json version 6.0.8 (https://github.com/JamesNK/Newtonsoft.Json)
+68.	node-agent-base version 1.0.1 (https://github.com/TooTallNate/node-agent-base/)
+69.	node-extend version 1.2.1 (https://github.com/justmoon/node-extend)
+70.	NodeJS version 0.10.29 (http://nodejs.org/dist/v0.10.29/)
+71.	node-oniguruma (alexandrudima) version 4.1.0 (https://github.com/alexandrudima/node-oniguruma)
+72.	node-oniguruma (atom) version 4.1.0 (https://github.com/atom/node-oniguruma)
+73.	Node-semver (aka semver) version 4.3.4 (https://github.com/npm/node-semver)
+74.	NRefactory version 10.0.0 (https://github.com/icsharpcode/NRefactory)
+75.	object.omit version 0.2.1 (https://github.com/jonschlinkert/object.omit)
+76.	Omnisharp-roslyn version 1.1.1 (https://github.com/OmniSharp/omnisharp-roslyn)
+77.	oniguruma version 5.9.3 (http://www.geocities.jp/kosako3/oniguruma/)
+78.	parse-glob version 3.0.2 (https://github.com/jonschlinkert/parse-glob)
+79.	preserve version 0.2.0 (https://github.com/jonschlinkert/preserve)
+80.	randomatic version 1.1.0 (https://github.com/jonschlinkert/randomatic)
+81.	react version 0.12.0 (https://github.com/facebook/react)
+82.	Readable-stream version 1.0.33 (https://github.com/iojs/readable-stream)
+83.	Readdirp version 1.3.0 (https://github.com/thlorenz/readdirp)
+84.	regex-cache version 0.4.2 (https://github.com/jonschlinkert/regex-cache)
+85.	repeat-element version 1.1.2 (https://github.com/jonschlinkert/repeat-element)
+86.	repeat-string version 1.5.2 (https://github.com/jonschlinkert/repeat-string)
+87.	sax version 1.1.1 (https://github.com/isaacs/sax-js)
+88.	SDB version 1.4 (https://github.com/mono/sdb)
+89.	Sigmund version 1.0.1 (https://github.com/isaacs/sigmund)
+90.	source-map version 0.4.4 (https://github.com/mozilla/source-map)
+91.	String_decoder version 0.10.31 (https://github.com/rvagg/string_decoder)
+92.	stringScore version 0.1.10 (https://github.com/joshaven/string_score)
+93.	Typechecker version 2.0.8 (https://github.com/bevry/typechecker)
+94.	typescript version 1.5 (https://github.com/Microsoft/TypeScript/)
+95.	typescript-sublime-plugin version 0.1.5 (https://github.com/Microsoft/TypeScript-Sublime-Plugin)
+96.	underscore version 1.8.2 (https://github.com/jashkenas/underscore)
+97.	vscode-swift (https://github.com/owensd/vscode-swift)
+98.	winreg version 0.0.12 (https://github.com/fresc81/node-winreg)
+```
+
+注意一下里面atom相关的模块
+
+### package.json
+
+```
+{
+  "name": "Code",
+  "version": "0.8.0",
+  "author": {
+    "name": "Microsoft Corporation"
+  },
+  "main": "./out/vs/workbench/electron-main/bootstrap",
+  "private": true,
+  "engines": {
+    "node": ">= 0.10.0 < 0.11.0"
+  },
+  "dependencies": {
+    "applicationinsights": "0.15.5",
+    "chokidar": "^1.0.0",
+    "emmet": "^1.3.0",
+    "first-mate": "git://github.com/alexandrudima/first-mate.git#c75bbe40b66b3560104faf399880c35683d7283d",
+    "getmac": "1.0.7",
+    "graceful-fs": "4.1.2",
+    "http-proxy-agent": "^0.2.6",
+    "https-proxy-agent": "^0.3.5",
+    "iconv-lite": "^0.4.7",
+    "sax": "^1.1.1",
+    "semver": "^4.2.0",
+    "winreg": "0.0.12"
+  },
+  "devDependencies": {
+    "async": "^1.4.0",
+    "atom-shell-installer-assets": "^0.2.0",
+    "azure-storage": "^0.3.1",
+    "crud-file-server": "^0.6.0",
+    "debounce": "^1.0.0",
+    "event-stream": "^3.1.7",
+    "express": "^4.13.1",
+    "glob": "^5.0.13",
+    "gulp": "^3.8.9",
+    "gulp-atom-electron": "^0.17.1",
+    "gulp-azure-storage": "^0.3.0",
+    "gulp-bom": "^1.0.0",
+    "gulp-filter": "^3.0.0",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-mocha": "^2.1.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-symdest": "^1.0.0",
+    "gulp-tsb": "git://github.com/jrieken/gulp-tsb.git#40f34810a95708c1bbc1433ceecb01203bf2819c",
+    "gulp-vinyl-zip": "^1.0.3",
+    "gulp-watch": "^4.2.4",
+    "innosetup-compiler": "^5.5.60",
+    "istanbul": "^0.3.17",
+    "jsdom-no-contextify": "^3.1.0",
+    "mime": "1.2.11",
+    "minimatch": "^2.0.10",
+    "mkdirp": "^0.5.0",
+    "mocha": "^2.2.5",
+    "optimist": "0.3.5",
+    "queue": "3.0.6",
+    "requirejs": "2.1.9",
+    "rimraf": "^2.2.8",
+    "uglify-js": "2.4.8",
+    "underscore": "^1.8.2",
+    "vinyl": "^0.4.5"
+  },
+  "update": {
+    "baseUrl": "https://ticino-builds.azurewebsites.net"
+  },
+  "commit": "7917414ff6ec7255dc60b2f7881e5178966e864e",
+  "date": "2015-09-07T10:53:44.750Z"
+}
+```
+
 ## 结语
 
 vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。
