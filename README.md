@@ -641,6 +641,9 @@ User/snippets/javascript.json
 
 ## 庖丁解牛code.app
 
+- electron 打包成可执行文件
+- 使用了一些atom模块、第三方模块
+
 app的安装目录是 `/Applications/Visual\ Studio\ Code.app`,右键show package content，然后一层一层的找里面的内容就可以了
 
 ```
