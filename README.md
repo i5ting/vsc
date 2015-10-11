@@ -367,6 +367,19 @@ typings/express/express.d.ts
 
 此时，就是输入SHIFT+SPACE就可以有提示了
 
+原理说明：我们可以看到2个配置文件，一个是不能修改的，另一个是空的，后面的会把前面的覆盖
+
+这其实和[jquery插件里的配置项](http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html#10501)原理是类似的
+
+```
+// 将defaults 和 options 参数合并到{}
+var opts = $.extend({},$.fn.tab.defaults,options);
+```
+
+把options里的覆盖$.fn.tab.defaults。
+
+
+
 ## 快捷键(默认)
 
 - 自动补全    command + SPACE
