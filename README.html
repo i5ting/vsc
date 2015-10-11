@@ -574,7 +574,11 @@
 
 <h2>缓存文件</h2>
 
+<p>按照一般app的设计，都是主应用，和用户目录下的缓存文件，把用户自定义的或使用生成的文件都放到缓存文件目录里。鉴于此，我们来找找code.app的缓存文件，或许能发现点有用的东西</p>
+
 <h3>缓存目录详情</h3>
+
+<p>目录是 <code>/Users/sang/Library/Application Support/Code</code> </p>
 <div class="highlight"><pre><span class="err">➜</span><span class="w">  </span><span class="vg">Code</span><span class="w">  </span><span class="vg">pwd</span>
 <span class="o">/</span><span class="vg">Users</span><span class="o">/</span><span class="vg">sang</span><span class="o">/</span><span class="vg">Library</span><span class="o">/</span><span class="vg">Application</span><span class="w"> </span><span class="vg">Support</span><span class="o">/</span><span class="vg">Code</span>
 <span class="err">➜</span><span class="w">  </span><span class="vg">Code</span><span class="w">  </span><span class="vg">tree</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="o">-</span><span class="vg">L</span><span class="w"> </span><span class="il">2</span>
@@ -607,7 +611,13 @@
 
 <span class="nl">8</span><span class="w"> </span><span class="vg">directories</span><span class="p">,</span><span class="w"> </span><span class="il">17</span><span class="w"> </span><span class="vg">files</span>
 </pre></div>
+<p>这些文件我们能看懂的就尽量看，看不懂的也无所谓，如果想深度了解里面的机制，还是有必要看看的。</p>
+
 <h3>storage.json</h3>
+
+<p>storage.json是code.app的核心配置文件，就像npm里的package.json一样。</p>
+
+<p>看一下具体内容</p>
 <div class="highlight"><pre><span class="err">➜</span><span class="w">  </span><span class="vg">Code</span><span class="w">  </span><span class="vg">cat</span><span class="w"> </span><span class="vg">storage</span><span class="o">.</span><span class="vg">json</span><span class="w"> </span>
 <span class="p">{</span>
 <span class="w">    </span><span class="s2">&quot;updateChannel&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;stable&quot;</span><span class="p">,</span>
@@ -716,6 +726,10 @@
 <li>当用户触发此snippet的时候，会按照&quot;body&quot;里代码生成</li>
 <li>$1代表光标位置</li>
 </ul>
+
+<p>自己按照上面的方法定义自己的snippets，可以提高很多工作效率哦</p>
+
+<p>下面看一下如何在代码中使用snippet，如图</p>
 
 <p><img src="img/17.png" alt=""></p>
 
