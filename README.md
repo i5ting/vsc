@@ -337,6 +337,20 @@ typings/express/express.d.ts
 
 ## 自定义快捷键
 
+### 查看快捷键
+
+```
+view -> Command Palette
+```
+
+对应的快捷键是`shift + command + p`
+
+敲完后，输入`tri`
+
+![](img/16.png)
+
+### 修改快捷键
+
 但是CTRL+SPACE在我的电脑里已经占用了，所以还是需要修改一下的，见下图
 
 打开快捷键配置
@@ -370,6 +384,8 @@ typings/express/express.d.ts
 
 此时，就是输入SHIFT+SPACE就可以有提示了
 
+
+### 快捷键配置原理
 原理说明：我们可以看到2个配置文件，一个是不能修改的，另一个是空的，后面的会把前面的覆盖
 
 这其实和[jquery插件里的配置项](http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html#10501)原理是类似的
@@ -388,6 +404,23 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 - 自动补全    command + SPACE
 - 快速打开文件 command + o
 - 快速定位文件 command + p
+- 分割编辑窗口 command + \ 
+- 关闭当前窗口 command + w
+- 隐藏二级菜单 command + b
+- 放大 command + =
+- 缩小 command + -
+- 插入表情 ctrl + command + space
+
+搜索
+
+- 当前文档里搜索 command + -
+- 所有文档里搜索 shift + command + -
+
+## 语音控制
+
+fn fn
+
+待测
 
 ## 自定义主题
 
@@ -444,6 +477,114 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在叫nw.js）一样，都是把node.js和chrome结合起来的工具，所以可以这么使用。
 
 不过vsc使用到的node.js模块并不多，比如引用util和vm等会报错，用node-webkit就不会这样。
+
+## 缓存文件
+
+### 缓存目录详情
+
+```
+➜  Code  pwd
+/Users/sang/Library/Application Support/Code
+➜  Code  tree . -L 2
+.
+├── DevTools Extensions
+├── File System
+│   ├── 000
+│   └── Origins
+├── GPUCache
+│   ├── data_0
+│   ├── data_1
+│   ├── data_2
+│   ├── data_3
+│   └── index
+├── Local Storage
+│   ├── chrome-devtools_devtools_0.localstorage
+│   ├── chrome-devtools_devtools_0.localstorage-journal
+│   ├── file__0.localstorage
+│   └── file__0.localstorage-journal
+├── QuotaManager
+├── QuotaManager-journal
+├── User
+│   ├── keybindings.json
+│   ├── launch.json
+│   └── snippets
+├── databases
+│   ├── Databases.db
+│   └── Databases.db-journal
+└── storage.json
+
+8 directories, 17 files
+```
+
+上面的目录结构基本都可以看懂，对应当前用户来说
+
+```
+├── User
+│   ├── keybindings.json(用户自定义的快捷键)
+│   ├── launch.json(调试加载的文件)
+│   └── snippets
+```
+
+### 用户快捷键
+
+比如快捷键
+
+```
+➜  Code  cat User/keybindings.json 
+// Place your key bindings in this file to overwrite the defaults
+[
+	{ "key": "ctrl+f12",                   "command": "editor.action.goToDeclaration",
+                                     "when": "editorTextFocus" },
+	{ "key": "shift+space",            "command": "editor.action.triggerSuggest",
+                                     "when": "editorTextFocus" }
+]%       
+```
+
+是不是和我们之前配置的一样?
+
+### 用户调试加载的文件
+
+```
+User/launch.json
+```
+
+和上面的是一样的，就不打印了。如果想每次都定义一下的话，可以自己修改，以后对当前用户就是全局的了
+
+### snippets
+
+User/snippets是snippets存放位置，比如javascript的定义
+
+见
+
+```
+User/snippets/javascript.json
+```
+
+### 自定义snippet
+
+```
+	 // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+```
+
+说明：
+
+- "Print to console" 是智能提示显示的
+- "prefix" 是用户输入的字母，比如本例中输入log自动提示
+- 当用户触发此snippet的时候，会按照"body"里代码生成
+- $1代表光标位置
+
+![](img/17.png)
 
 ## 结语
 
