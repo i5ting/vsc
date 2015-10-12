@@ -1182,6 +1182,24 @@ terminateTree<span class="o">()</span> <span class="o">{</span>
 <p>如果是已有分支就</p>
 <div class="highlight"><pre><span class="vg">git</span><span class="w"> </span><span class="vg">checkout</span><span class="w"> </span><span class="vg">dev</span>
 </pre></div>
+<h3>怎么让语法检查器支持es6的语法呢？</h3>
+
+<p>要支持es6的话，需要在项目下建一个jsconfig.json，内容为</p>
+<div class="highlight"><pre><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;compilerOptions&quot;</span><span class="o">:</span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;target&quot;</span><span class="o">:</span><span class="s2">&quot;ES6&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;module&quot;</span><span class="o">:</span><span class="s2">&quot;commonjs&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>嫌麻烦的话可以安装下@hellopao 写的模块<a href="https://www.npmjs.com/package/jsf">jsf</a>，通过命令行来生成该文件</p>
+<div class="highlight"><pre><span class="vg">npm</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">jsf</span><span class="w"> </span><span class="o">-</span><span class="vg">g</span>
+<span class="vg">jsf</span>
+</pre></div>
+<h3>图片没有路径选择提示么？</h3>
+
+<p>目前还没有，需要等</p>
+
 <h2>结语</h2>
 
 <p>vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。</p>
