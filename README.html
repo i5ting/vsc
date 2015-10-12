@@ -317,6 +317,8 @@
 </pre></div>
 <p>测试express项目是正常的。</p>
 
+<p>说明：如果是自己的项目，需要自己构建git版本控制的，faq里有具体说明。</p>
+
 <h3>修改launch.json的内容</h3>
 
 <p>输入command + t快速定位文件：.vscode/launch.json</p>
@@ -1157,6 +1159,28 @@ terminateTree<span class="o">()</span> <span class="o">{</span>
 <span class="w">  </span><span class="s2">&quot;commit&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;7917414ff6ec7255dc60b2f7881e5178966e864e&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="s2">&quot;date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2015-09-07T10:53:44.750Z&quot;</span>
 <span class="p">}</span>
+</pre></div>
+<h2>FAQ</h2>
+
+<h3>如何添加git地址？</h3>
+
+<p>vsc其实不管你的git初始化的，只要你当前是git管理的，它的git部分才有用。</p>
+
+<p>也就是说git需要自己处理。</p>
+
+<p>比如</p>
+<div class="highlight"><pre><span class="vg">express</span><span class="w"> </span><span class="vg">helloworld</span>
+<span class="vg">cd</span><span class="w"> </span><span class="vg">helloworld</span>
+<span class="vg">git</span><span class="w"> </span><span class="vg">init</span>
+<span class="vg">git</span><span class="w"> </span><span class="vg">remote</span><span class="w"> </span><span class="vg">add</span><span class="w"> </span><span class="vg">origin</span><span class="w"> </span><span class="vg">git@github</span><span class="o">.</span><span class="nl">com:</span><span class="vg">ashtuchkin</span><span class="o">/</span><span class="vg">iconv</span><span class="o">-</span><span class="vg">lite</span><span class="o">.</span><span class="vg">git</span>
+<span class="vg">git</span><span class="w"> </span><span class="vg">add</span><span class="w"> </span><span class="o">.</span>
+<span class="vg">git</span><span class="w"> </span><span class="vg">commit</span><span class="w"> </span><span class="o">-</span><span class="vg">am</span><span class="w"> </span><span class="c1">&#39;init&#39;</span>
+</pre></div>
+<p>如果要切换分支，可以用checkout命令</p>
+<div class="highlight"><pre><span class="vg">git</span><span class="w"> </span><span class="vg">checkout</span><span class="w"> </span><span class="o">-</span><span class="vg">b</span><span class="w"> </span><span class="vg">dev</span>
+</pre></div>
+<p>如果是已有分支就</p>
+<div class="highlight"><pre><span class="vg">git</span><span class="w"> </span><span class="vg">checkout</span><span class="w"> </span><span class="vg">dev</span>
 </pre></div>
 <h2>结语</h2>
 
