@@ -1136,6 +1136,32 @@ git checkout -b dev
 git checkout dev
 ```
 
+### 怎么让语法检查器支持es6的语法呢？
+
+
+要支持es6的话，需要在项目下建一个jsconfig.json，内容为
+
+```
+{
+    "compilerOptions":{
+        "target":"ES6",
+        "module":"commonjs"
+    }
+}
+```
+
+嫌麻烦的话可以安装下@hellopao 写的模块[jsf](https://www.npmjs.com/package/jsf)，通过命令行来生成该文件
+
+```
+npm install jsf -g
+jsf
+```
+
+### 图片没有路径选择提示么？
+
+目前还没有，需要等
+
+
 ## 结语
 
 vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。
