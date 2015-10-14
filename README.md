@@ -1173,3 +1173,22 @@ vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还
 
 - 0.8.1
 - VS Code v0.9.1 (October 2015) https://code.visualstudio.com/updates#VSCode
+
+
+### markdown preview
+
+0.9+开始增加了markdown预览功能，试用了一下，还是非常不错得
+
+![](img/0_9_0_openpreviewside.png)
+
+
+上面的命令，可以翻译一下
+
+- 新建split窗口
+- 讲当前markdown切换到预览模式
+
+```
+command + \
+shift + command +v
+```
+
