@@ -1167,3 +1167,9 @@ jsf
 vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。
 
 推荐使用~
+
+
+## TODO
+
+- 0.8.1
+- VS Code v0.9.1 (October 2015) https://code.visualstudio.com/updates#VSCode
