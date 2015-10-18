@@ -101,6 +101,13 @@ git checkout 输入git分支名
 - Markdown 代表当前根据后缀识别的语言，用于语法高亮渲染
 - ☺ 是意见反馈
 
+
+Integrate with External Tools via Tasks
+
+https://code.visualstudio.com/docs/editor/tasks
+
+(todo)
+
 ## 主菜单说明
 
 ### Explore
@@ -483,6 +490,8 @@ vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在�
 ## 缓存文件
 
 按照一般app的设计，都是主应用，和用户目录下的缓存文件，把用户自定义的或使用生成的文件都放到缓存文件目录里。鉴于此，我们来找找code.app的缓存文件，或许能发现点有用的东西
+
+可参照 https://code.visualstudio.com/docs/customization/userandworkspace 理解
 
 ### 缓存目录详情
 
@@ -1174,6 +1183,21 @@ vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还
 - 0.8.1
 - VS Code v0.9.1 (October 2015) https://code.visualstudio.com/updates#VSCode
 
+
+0.9.1主要的改进有：
+
+- 支持本地的持久自定义位置
+  - Windows %USERPROFILE%\.vscode\extensions
+  - Mac $HOME/.vscode/extensions
+  - Linux $HOME/.vscode/extensions
+
+- 支持自定义语言和自定义主题
+- 改进了 Debug
+- C# 改进了OmniSharp 的支持
+- TypeScript 支持 1.6
+- Markdown 更好的预览
+- Unity 支持Unity shader 文件高亮
+- 一些其他的改进和 Bug 修复。
 
 ### markdown preview
 
