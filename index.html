@@ -231,7 +231,13 @@
 <li>☺ 是意见反馈</li>
 </ul>
 
-<h2>主菜单说明</h2>
+<p>Integrate with External Tools via Tasks</p>
+
+<p>https://code.visualstudio.com/docs/editor/tasks</p>
+
+<p>(todo)</p>
+
+<h2>Workbench主菜单说明</h2>
 
 <h3>Explore</h3>
 
@@ -487,6 +493,16 @@
 </pre></div>
 <p>此时，就是输入SHIFT+SPACE就可以有提示了</p>
 
+<h3>Workbench主菜单快捷键</h3>
+
+<p>熟悉mac的都知道folder里的cmd+1|2|3|4切换文件夹显示，其实我们也可以使用类似的快捷键来提高工作效率</p>
+<div class="highlight"><pre><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cmd+1&quot;</span><span class="p">,</span><span class="w">           </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workbench.view.explorer&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cmd+2&quot;</span><span class="p">,</span><span class="w">           </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workbench.view.search&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cmd+3&quot;</span><span class="p">,</span><span class="w">           </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workbench.view.git&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cmd+4&quot;</span><span class="p">,</span><span class="w">           </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workbench.view.debug&quot;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+<p>爽歪歪~~</p>
+
 <h3>快捷键配置原理</h3>
 
 <p>原理说明：我们可以看到2个配置文件，一个是不能修改的，另一个是空的，后面的会把前面的覆盖</p>
@@ -577,6 +593,8 @@
 <h2>缓存文件</h2>
 
 <p>按照一般app的设计，都是主应用，和用户目录下的缓存文件，把用户自定义的或使用生成的文件都放到缓存文件目录里。鉴于此，我们来找找code.app的缓存文件，或许能发现点有用的东西</p>
+
+<p>可参照 https://code.visualstudio.com/docs/customization/userandworkspace 理解</p>
 
 <h3>缓存目录详情</h3>
 
@@ -1206,6 +1224,47 @@ terminateTree<span class="o">()</span> <span class="o">{</span>
 
 <p>推荐使用~</p>
 
+<h2>TODO</h2>
+
+<ul>
+<li>0.8.1</li>
+<li>VS Code v0.9.1 (October 2015) https://code.visualstudio.com/updates#VSCode</li>
+</ul>
+
+<p>0.9.1主要的改进有：</p>
+
+<ul>
+<li><p>支持本地的持久自定义位置</p>
+
+<ul>
+<li>Windows %USERPROFILE%.vscode\extensions</li>
+<li>Mac $HOME/.vscode/extensions</li>
+<li>Linux $HOME/.vscode/extensions</li>
+</ul></li>
+<li><p>支持自定义语言和自定义主题</p></li>
+<li><p>改进了 Debug</p></li>
+<li><p>C# 改进了OmniSharp 的支持</p></li>
+<li><p>TypeScript 支持 1.6</p></li>
+<li><p>Markdown 更好的预览</p></li>
+<li><p>Unity 支持Unity shader 文件高亮</p></li>
+<li><p>一些其他的改进和 Bug 修复。</p></li>
+</ul>
+
+<h3>markdown preview</h3>
+
+<p>0.9+开始增加了markdown预览功能，试用了一下，还是非常不错得</p>
+
+<p><img src="img/0_9_0_openpreviewside.png" alt=""></p>
+
+<p>上面的命令，可以翻译一下</p>
+
+<ul>
+<li>新建split窗口</li>
+<li>讲当前markdown切换到预览模式</li>
+</ul>
+<div class="highlight"><pre><span class="vg">command</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">\</span>
+<span class="vg">shift</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="vg">command</span><span class="w"> </span><span class="o">+</span><span class="vg">v</span>
+</pre></div>
 			          	</article>
 			        </div>
 					</div>
