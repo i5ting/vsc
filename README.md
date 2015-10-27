@@ -108,7 +108,7 @@ https://code.visualstudio.com/docs/editor/tasks
 
 (todo)
 
-## 主菜单说明
+## Workbench主菜单说明
 
 ### Explore
 
@@ -394,7 +394,21 @@ view -> Command Palette
 此时，就是输入SHIFT+SPACE就可以有提示了
 
 
+### Workbench主菜单快捷键
+
+熟悉mac的都知道folder里的cmd+1|2|3|4切换文件夹显示，其实我们也可以使用类似的快捷键来提高工作效率
+
+```
+	{ "key": "cmd+1",           "command": "workbench.view.explorer" },
+	{ "key": "cmd+2",           "command": "workbench.view.search" },
+	{ "key": "cmd+3",           "command": "workbench.view.git" },
+	{ "key": "cmd+4",           "command": "workbench.view.debug" }
+```
+
+爽歪歪~~
+
 ### 快捷键配置原理
+
 原理说明：我们可以看到2个配置文件，一个是不能修改的，另一个是空的，后面的会把前面的覆盖
 
 这其实和[jquery插件里的配置项](http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html#10501)原理是类似的
