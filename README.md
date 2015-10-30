@@ -407,6 +407,12 @@ view -> Command Palette
 
 爽歪歪~~
 
+### working files切换
+
+mac下`ctrl + -`和`shift+ctrl + -`切换当前working files
+
+还是很爽的
+
 ### 快捷键配置原理
 
 原理说明：我们可以看到2个配置文件，一个是不能修改的，另一个是空的，后面的会把前面的覆盖
@@ -438,6 +444,18 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 
 - 当前文档里搜索 command + -
 - 所有文档里搜索 shift + command + -
+
+## 我的玩法（常用快捷键）
+
+- `ctrl + command + f` 放大到全屏
+- 设置Workbench主菜单快捷键，然后就有了`command + 1到4`的快捷键，快速切换
+- `command + b` 显示或隐藏（奇数次和偶数次）二级菜单，让可视区更大
+- 可视区内`command + \` 新建编辑窗口（尤其是markdown里面，一个编写，一个预览`shift + command + v`）
+- 可视区内`command + w` 关闭编辑窗口
+- `command + p` 快速打开文件
+- 使用`ctrl + -`或者`shift + ctrl + -`切换working files
+- 当前文档里搜索 `command + -`
+- 所有文档里搜索 `shift + command + -`
 
 ## 语音控制
 
