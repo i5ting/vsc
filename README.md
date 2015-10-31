@@ -456,6 +456,7 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 - 使用`ctrl + -`或者`shift + ctrl + -`切换working files
 - 当前文档里搜索 `command + -`
 - 所有文档里搜索 `shift + command + -`
+- `shift + opt + f`格式化
 
 ## 语音控制
 
