@@ -1,6 +1,6 @@
 # visual studio code
 
-[visual studio code](https://code.visualstudio.com/)（以下简称vsc）最近更新到了0.8.0版本，新加的一些特性都很nice。多了几个配色方案（流行的monokai配色也有了，虽然效果并不好），也支持自定义安装目录了。最让我感动的是对jsx文件做了语法高亮，写react的时候再也不是一片黑色了。
+[visual studio code](https://code.visualstudio.com/)（以下简称vsc）最近更新到了0.9.2版本，新加的一些特性都很nice。多了几个配色方案（流行的monokai配色也有了，虽然效果并不好），也支持自定义安装目录了。最让我感动的是对jsx文件做了语法高亮，写react的时候再也不是一片黑色了。
 
 今天来了兴致，推荐一下，希望有更多的同学来使用这个编辑器。
 
@@ -25,6 +25,7 @@ vsc的宣传语是：
 - 内置html开发神器emmet
 - 速度非常快
 - 支持多主题（配色方案）
+- - 对于其他编辑器的高效操作和快捷键都有继承
 
 ## 安装
 
@@ -1249,3 +1250,11 @@ command + \
 shift + command +v
 ```
 
+## vsc在线付费培训
+
+时间1周
+
+- 快速了解特性
+- 培养高效习惯
+
+详见 http://i5ting.github.io/vsc-course/ 
