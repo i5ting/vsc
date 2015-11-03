@@ -30,7 +30,7 @@ vsc的宣传语是：
 - 支持语法自动补全，智能提示
 - 内置html开发神器emmet
 - 速度非常快
-- 支持多主题（配色方案）
+- 支持多主题（配色方案）0.9.1之后更爽
 - 对于其他编辑器的高效操作和快捷键都有继承（训练习惯的时候会讲）
 
 ## 安装
@@ -173,7 +173,19 @@ vsc不提供创建git项目功能，所以需要先创建git项目，然后打�
 
 ### Debug
 
-使用方法也很简单,步骤如下：
+为什么选用vsc，一个原因就是因为调试
+
+- node-inspector虽好，项目已大特别慢，这方面vsc做了不少优化
+- tdd/bdd虽好，还不能完全实现
+
+vsc官方说
+
+    We improved stepping performance by loading the scopes and variables 
+    of stack frames lazily. This improvement is based on a protocol change
+    that affects all debug adapters.
+
+
+vsc调试使用方法也很简单,步骤如下：
 
 - 打开要调试的文件，按f5,编辑器会生成一个launch.json
 - 修改launch.json相关内容，主要是name和program字段，改成和你项目对应的
@@ -334,6 +346,8 @@ curl http://127.0.0.1:3200/
 - [node-inspector视频](http://i5ting.github.io/nodejs-video/node-inspector.mov)
 - [node-debug视频](http://i5ting.github.io/nodejs-video/node-debug.mov)
 
+课后作业：亲手debug一次，感受一下vsc的魅力
+
 ## 自动补全(智能提示)
 
 因为之前微软推出了typescript语言，结合tsd文件，用visual studio写typescript代码是相当爽的，智能提示的功能非常nb。
@@ -364,7 +378,7 @@ tsd query -r -o -a install express
 typings/express/express.d.ts
 ```
 
-在代码编辑区里，输入CTRL+SPACE就可以有提示了。
+在代码编辑区里，输入CTRL+SPACE(默认快捷键)就可以有提示了。
 
 ![](img/15.png)
 
@@ -375,7 +389,7 @@ typings/express/express.d.ts
 ### 查看快捷键
 
 ```
-view -> Command Palette
+view -> Command Palette（调色板）
 ```
 
 对应的快捷键是`shift + command + p`
@@ -424,6 +438,12 @@ view -> Command Palette
 
 熟悉mac的都知道folder里的cmd+1|2|3|4切换文件夹显示，其实我们也可以使用类似的快捷键来提高工作效率
 
+xcode里面也是，所以command键是我最常用的快捷键
+
+![](img/19.png)
+
+推荐配置如下
+
 ```
 	{ "key": "cmd+1",           "command": "workbench.view.explorer" },
 	{ "key": "cmd+2",           "command": "workbench.view.search" },
@@ -431,9 +451,17 @@ view -> Command Palette
 	{ "key": "cmd+4",           "command": "workbench.view.debug" }
 ```
 
+这样配置可以让大拇指最少移动，以大拇指为中心，快速切换，速度非常快
+
 爽歪歪~~
 
 ### working files切换
+
+一个编辑区里，vsc是不缓存的，毕竟是js写的，相对较弱，这其实是vsc的一个优化
+
+所以cmd + p 打开了文件之后，之前的文件就找不到了
+
+实际上都存到working files里了，只要我们切换working files即可
 
 mac下`ctrl + -`和`shift+ctrl + -`切换当前working files
 
@@ -452,7 +480,7 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 
 把options里的覆盖$.fn.tab.defaults。
 
-
+合并后的的配置项，再和{}合并，至少保证配置是{}
 
 ## 快捷键(默认)
 
@@ -528,6 +556,8 @@ fn fn
 - http://www.iteye.com/news/27580
 - http://docs.emmet.io/
 
+写其他语言也有这样的神奇，见code snippets
+
 ## Node API 查看
 
 在写node.js代码的时候，有时会忘记某个模块中有哪些方法及其用法，经常要去官网翻一下api文档。
@@ -544,6 +574,8 @@ fn fn
 vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在叫nw.js）一样，都是把node.js和chrome结合起来的工具，所以可以这么使用。
 
 不过vsc使用到的node.js模块并不多，比如引用util和vm等会报错，用node-webkit就不会这样。
+
+更好的查看api办法是使用docset查看文档，比如zeal或dash（后面会讲）
 
 ## 缓存文件
 
@@ -1256,6 +1288,15 @@ vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还
 - Markdown 更好的预览
 - Unity 支持Unity shader 文件高亮
 - 一些其他的改进和 Bug 修复。
+
+```
+npm install -g yo
+npm install -g generator-code
+yo code
+```
+
+- 支持更多语言着色
+- 主题
 
 ### markdown preview
 
