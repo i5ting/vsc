@@ -51,6 +51,8 @@ $ vsc
 
 每次去桌面找快捷方式是非常傻的办法，终端里输入几个字母就可以搞定，又何必那么费劲呢？
 
+键盘一定比鼠标操作快，你还是用鼠标么？土不土？
+
 ## 功能区说明
 
 ![](img/1.png)
@@ -110,12 +112,17 @@ git checkout 输入git分支名
 - Markdown 代表当前根据后缀识别的语言，用于语法高亮渲染
 - ☺ 是意见反馈
 
+稍微点评一下，微软的界面做的还是下了功夫的，细节处理的不错
 
 Integrate with External Tools via Tasks
 
 https://code.visualstudio.com/docs/editor/tasks
 
-(todo)
+vsc还是支持各种task，Gulp, Grunt 或 Jake等
+
+常见的各种编译，如markdown编译成html，sass编译成css，coffee或typescript编译成js等
+
+当也有各种语法编码校验
 
 ## Workbench主菜单说明
 
@@ -132,23 +139,37 @@ DIR很好理解，就是你当前打开的文件夹
 
 working files是已打开的所有文件，如果此时点击右上角的分屏按钮，可以把文件放到对应的编辑区里。
 
-
 打开文件夹在菜单里，快捷键command + o
 
 ### Search
 
+常见的各种搜索都支持了，很强大
+
 ![](img/6.png)
 
+如果设置快捷键cmd+2，直接定位到搜索框，输入文字后，直接回车就是全文搜索
 
 ### Git
 
+git是目前最常用的版本控制软件，推荐命令行操作，这样对原理理解的更深入，可以避免很多gui莫名其妙的问题
+
+vsc对它进行了抽象，提供的功能，刚刚好够用
+
 ![](img/7.png)
+
+它还有diff功能，虽然大部分时间我用命令行，但我也会用它的diff和commit的
+
+![](img/18.png)
+
+简单明了
 
 下面给出一些git学习资料（如果熟悉，自动跳过）
 
 - [搬进 Github](http://gitbeijing.com/)
 - [git-guide](http://www.bootcss.com/p/git-guide/)
 - [git入门gif演示](https://git.oschina.net/wzw/git-quick-start)
+
+vsc不提供创建git项目功能，所以需要先创建git项目，然后打开再用它编辑
 
 ### Debug
 
@@ -161,7 +182,6 @@ working files是已打开的所有文件，如果此时点击右上角的分屏�
 - 打断点，尽情调试（只要你会chrome调试，一模一样）
 
 ![](img/2.gif)
-
 
 ## 实例
 
@@ -308,7 +328,6 @@ curl http://127.0.0.1:3200/
 
 它和chrome的调试也是一样的，此处就不多讲了。
 
-
 ### 更多
 
 - [node-debug 三法三例之node debugger + node inspector](https://cnodejs.org/topic/5463f6e872f405c829029f7e)
@@ -350,8 +369,6 @@ typings/express/express.d.ts
 ![](img/15.png)
 
 目前node.d.ts版本还是0.12.0，和node v4的api差不了多少
-
-
 
 ## 自定义快捷键
 
@@ -492,7 +509,6 @@ fn fn
 ```
 <link rel="stylesheet" href="">
 ```
-
 
 连续输入类和id，比如p.bar#foo，会自动生成： 
 
