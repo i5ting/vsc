@@ -29,7 +29,7 @@ vsc的宣传语是：
 - 跨平台支持Linux, Mac OSX, and Windows
 - 支持语法自动补全，智能提示
 - 内置html开发神器emmet
-- 速度非常快
+- 速度、调试效率非常快
 - 支持多主题（配色方案）0.9.1之后更爽
 - 对于其他编辑器的高效操作和快捷键都有继承（训练习惯的时候会讲）
 
@@ -53,6 +53,8 @@ $ vsc
 
 键盘一定比鼠标操作快，你还是用鼠标么？土不土？
 
+这个模块是nodejs写的，后面会讲
+
 ## 功能区说明
 
 ![](img/1.png)
@@ -63,6 +65,8 @@ $ vsc
 1. Search
 1. Git
 1. Debug
+
+分别是文件夹，搜索，git和调试
 
 功能区2：二级菜单
 
@@ -169,7 +173,7 @@ vsc对它进行了抽象，提供的功能，刚刚好够用
 - [git-guide](http://www.bootcss.com/p/git-guide/)
 - [git入门gif演示](https://git.oschina.net/wzw/git-quick-start)
 
-vsc不提供创建git项目功能，所以需要先创建git项目，然后打开再用它编辑
+要注意：vsc不提供创建git项目功能，所以需要先创建git项目，然后打开再用它编辑
 
 ### Debug
 
@@ -184,6 +188,9 @@ vsc官方说
     of stack frames lazily. This improvement is based on a protocol change
     that affects all debug adapters.
 
+意思就是他们做了很多优化
+
+使用中，确实比node-inspector快很多
 
 vsc调试使用方法也很简单,步骤如下：
 
@@ -195,11 +202,15 @@ vsc调试使用方法也很简单,步骤如下：
 
 ![](img/2.gif)
 
-## 实例
+## express调试实例
+
+这是我们最常用的调试
 
 通过创建express项目构建，调试来演示vsc的具体用法
 
 ### 创建express项目
+
+使用express-generator
 
 ```
 ➜  examples git:(master) ✗ express helloworld
@@ -360,6 +371,8 @@ TSD is a package manager to search and install TypeScript definition files direc
 
 https://github.com/DefinitelyTyped/tsd
 
+和npm很像，有木有？
+
 目前主流的前端类库/框架，包括node.js及其模块/框架都有相应的tsd文件，可以去[DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped)上找一下。
 
 
@@ -370,6 +383,8 @@ npm install tsd -g
 cd vsc-doc
 tsd query -r -o -a install express
 ```
+
+和npm很像，有木有？
 
 此时看一下当前目录，下面的express.d.ts文件即是具体提示用的。
 
@@ -386,7 +401,11 @@ typings/express/express.d.ts
 
 ## 自定义快捷键
 
+上面是基本的操作，下面看点高效的使用：自定义快捷键
+
 ### 查看快捷键
+
+菜单view里找 Command Palette项
 
 ```
 view -> Command Palette（调色板）
@@ -433,6 +452,7 @@ view -> Command Palette（调色板）
 
 此时，就是输入SHIFT+SPACE就可以有提示了
 
+说明：key就是快捷键，command是编辑器的操作
 
 ### Workbench主菜单快捷键
 
@@ -442,7 +462,7 @@ xcode里面也是，所以command键是我最常用的快捷键
 
 ![](img/19.png)
 
-推荐配置如下
+推荐配置如下，按照顺序来，好记
 
 ```
 	{ "key": "cmd+1",           "command": "workbench.view.explorer" },
@@ -452,8 +472,6 @@ xcode里面也是，所以command键是我最常用的快捷键
 ```
 
 这样配置可以让大拇指最少移动，以大拇指为中心，快速切换，速度非常快
-
-爽歪歪~~
 
 ### working files切换
 
@@ -556,7 +574,7 @@ fn fn
 - http://www.iteye.com/news/27580
 - http://docs.emmet.io/
 
-写其他语言也有这样的神奇，见code snippets
+写其他语言也有这样的神奇，见后面讲的code snippets章节
 
 ## Node API 查看
 
@@ -565,7 +583,7 @@ fn fn
 这里介绍下怎么使用vsc来搞定这一问题。
 
 1. 打开vsc控制台（Help > Toggle Developer Tools > Console）
-1. 在控制台写代码，查询模块方法。
+2. 在控制台写代码，查询模块方法。
 
 过程如下图：
 
@@ -725,6 +743,8 @@ User/snippets是snippets存放位置，比如javascript的定义
 User/snippets/javascript.json
 ```
 
+snippets中文是代码片段，是自定义智能提示用的
+
 ### 自定义snippet
 
 ```
@@ -754,6 +774,8 @@ User/snippets/javascript.json
 下面看一下如何在代码中使用snippet，如图
 
 ![](img/17.png)
+
+和vim、nodepad++里的录制宏类似
 
 ## 庖丁解牛code.app
 
@@ -1307,8 +1329,10 @@ yo code
 
 上面的命令，可以翻译一下
 
-- 新建split窗口
-- 讲当前markdown切换到预览模式
+- 1）新建split窗口
+- 2）讲当前markdown切换到预览模式
+
+即
 
 ```
 command + \
@@ -1325,3 +1349,4 @@ shift + command +v
 - 培养高效习惯
 
 详见 http://i5ting.github.io/vsc-course/ 
+

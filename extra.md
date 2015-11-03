@@ -14,7 +14,9 @@
 
 ## alias
 
-俗称别名，在git里面我们最常用的命令是查看状态，可以又太长
+俗称别名，是一个linux命令
+
+举例：在git里面我们最常用的命令是查看状态，可以又太长
 
 于是
 
@@ -35,11 +37,23 @@ source ~/.zshrc
 ```
 如果不理解环境变量，自己去闭门思过去
 
+它的作用是让长命令变短
+
+有个经典说法：“演进就应该像女生的裙子”
+
 ## 杀死所有nodejs相关进程
+
+天天写nodejs的都有这个痛苦，起了太多实例，分不清哪个是哪个
+
+索性都干掉吧
 
 ```
 ps -ef|grep node|awk '{print $2}'|xargs kill -9
 ```
+
+这是非常经典的一条命令
+
+说明
 
 - ps -ef查看进程
 - grep node是过滤进程里的和node相关的所有进程
@@ -48,7 +62,15 @@ ps -ef|grep node|awk '{print $2}'|xargs kill -9
 
 `|`是pipe，即管道的意思：上一个的输出，是下一个的输入
 
+nodejs里stream和pipe是一样的概念
+
 如此理解变掌握了shell的精髓
+
+“上一个的输出，是下一个的输入，组合着用”
+
+每一个命令把它写到极致
+
+这是unix的哲学
 
 ## 命令行查找代码
 
@@ -95,8 +117,11 @@ README.md
 427:这其实和[jquery插件里的配置项](http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html#10501)原理是类似的
 1266:详见 http://i5ting.github.io/vsc-course/ 
 ```
+这其实就是全文检索
 
 其实go写的[fzf](https://github.com/junegunn/fzf)也很棒
+
+这个命令非常非常常用，尤其是阅读源码，或者特别复杂的项目里
 
 ##  查询文档神器
 
@@ -109,11 +134,14 @@ see here ： http://kapeli.com/docset_links
 
 如果是下载到本地的docset，放到zealdocs目录下面，需要重启zeal
 
-
 - linux 叫zeal
 - mac 叫dash
 
 都是基于docset的神器
+
+本地文档的好处是，尽量少依赖网络，没有网也能干活，这是本事
+
+培养自己的独立思考能力，而不是acv的庸才
 
 ## 目录切换神器
 
@@ -147,9 +175,17 @@ Mac os
     /Users/sang/workspace/github/nodejs-newbie
     ➜  nodejs-newbie git:(master) ✗ 
   
+这样就会跳到上一次cd进去的目录，是不是非常方便？
+
+我本地有非常多的github上的项目，彼此依赖，就采用这种方式切换，省了不少脑细胞
+ 
 如果想玩的更high，可以参见https://github.com/clvv/fasd
 
 ## 根据端口号查看进程
+
+nodejs写web程序，都要起一个端口，反复打开，关闭，就难免有僵尸进程，怎么也杀不掉
+
+只知道端口如何查看进程呢？
 
 lsof是系统管理/安全的工具，列出打开文件（lists openfiles）
 
@@ -159,11 +195,15 @@ COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
 node    30438 sang   26u  IPv6 0xd9428cd06d17f6af      0t0  TCP *:geniuslm (LISTEN
 ```
 
+3005是端口号
+
 于是衍生一下，根据端口杀进程，比如express默认是3000端口，难免有时有僵尸进程，如果直接根据端口杀死，是不是很爽？
 
 ```
 lsof -i:3005|xargs killall
 ```
+
+全干掉，想不死都不行
 
 再衍生一下，能不能封装成一个nodejs模块，端口号作为参数，完成上述功能呢？
 
@@ -171,10 +211,14 @@ lsof -i:3005|xargs killall
 
 kp is a tool for kill process by server port
 
+我写的一个模块，上面就是原理，下面说一下用法
+
     [sudo]npm install -g kp
     kp 3002
 
 https://github.com/i5ting/kp
+
+是不是简单实用呢？
 
 ## mongodb客户端
 
@@ -189,7 +233,11 @@ https://github.com/i5ting/kp
 - mac下面使用quicksilver或spotlit
 - linux使用alias rogo='robomongo'
 
+别名alias，有用吧，得学会偷懒
+
 ## 使用node-inspector调试Node代码
+
+上面讲了vsc调试nodejs，可是如果你想了解更深的原理
 
 看我写的三法三例调试教程
 
@@ -203,13 +251,18 @@ https://cnodejs.org/topic/55c44f0db98f51142b367b54
 
 ## mongo here 
 
+如果你同时有多个项目，它们有不同的mongodb，你会哭的，而且又是启动有特别容易出问题
+
+mongo here就是解决这个问题的
+
 当前目录启动mongodb
 
 在新建目录执行
 
     mh
     
-它会创建tmp目录
+它会创建tmp目录，然后日志，数据都放到tmp里。
+
 
 全局启动mongodb
 
@@ -241,8 +294,13 @@ nohup mongod --bind_ip 127.0.0.1 --port 27017 --dbpath tmp/db --logpath tmp/logs
 
 mhg其实更简单，就是在用户主目录`~`下建
 
+懂shell就是好，可以干很多坏事儿，是不是？
 
 ## json editor 
+
+我平常经常api，大部分api都是返回json字符串，结构看起来特别恶心
+
+那能不能可视化呢？
 
     [sudo] npm install -g je
     je
@@ -271,13 +329,17 @@ https://github.com/i5ting/i-csv
 
 ## upload-cli
 
-a node cli tools for uploads ui
+服务器上有些上传、删除的工作，ssh进去之后，操作太麻烦了
+
+于是写了upload-cli ：a node cli tools for uploads ui
 
 https://github.com/i5ting/upload-cli
 
 - 目前已经支持通过命令行`uci`上传，可指定host
 
 ## 编写markdown文档
+
+大部分人都有的需求
 
 - 生成markdown模块
 - markdown编译成html
@@ -295,6 +357,8 @@ https://github.com/i5ting/upload-cli
 于是就有了https://github.com/i5ting/docto
 
 一条命令全部搞定
+
+
 
 # 如何编写nodejs命令行模块？
 
@@ -623,6 +687,8 @@ https://github.com/trending
 
 ## 快捷键练习
 
+## 自定义snippet
+
 ## extra练习
 
 ## 编写一个node命令行模块
@@ -630,3 +696,12 @@ https://github.com/trending
 ## 阅读一个github上开源项目，写源码分析笔记
 
 下周一前提交给我，sang@aircos.com，我会review，过时不候
+
+# 致谢
+
+最后感谢大家来学习，讲的主要是思路，具体做不做不是讲师能管的了的
+
+我希望课程能够对大家有用，在本周内学会里面的所有内容（随时可以提问）
+
+- vsc快捷键会了，sublime也是通用的
+- extra里都是比较好的实践
