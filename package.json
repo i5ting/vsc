@@ -6,6 +6,7 @@
     "start": "npm demo/bin/www"
   },
   "dependencies": {
+    "express": "^4.13.3",
     "gulp-react": "^3.0.1",
     "webpack": "^1.12.1"
   },
