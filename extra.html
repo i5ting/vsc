@@ -1,0 +1,838 @@
+
+	    <html>
+	      <head>
+				  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	        <title>extra</title>
+					
+					<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+			
+				  <style>
+					pre {
+					    counter-reset: line-numbering;
+					    border: solid 1px #d9d9d9;
+					    border-radius: 0;
+					    background: #fff;
+					    padding: 0;
+					    line-height: 23px;
+					    margin-bottom: 30px;
+					    white-space: pre;
+					    overflow-x: auto;
+					    word-break: inherit;
+					    word-wrap: inherit;
+					}
+
+					pre a::before {
+					  content: counter(line-numbering);
+					  counter-increment: line-numbering;
+					  padding-right: 1em; /* space after numbers */
+					  width: 25px;
+					  text-align: right;
+					  opacity: 0.7;
+					  display: inline-block;
+					  color: #aaa;
+					  background: #eee;
+					  margin-right: 16px;
+					  padding: 2px 10px;
+					  font-size: 13px;
+					  -webkit-touch-callout: none;
+					  -webkit-user-select: none;
+					  -khtml-user-select: none;
+					  -moz-user-select: none;
+					  -ms-user-select: none;
+					  user-select: none;
+					}
+
+					pre a:first-of-type::before {
+					  padding-top: 10px;
+					}
+
+					pre a:last-of-type::before {
+					  padding-bottom: 10px;
+					}
+
+					pre a:only-of-type::before {
+					  padding: 10px;
+					}
+			
+					.highlight { background-color: #ffffcc } /* RIGHT */
+					</style>
+	      </head>
+	      <body>
+				  <div>
+							<div style='width:25%;'>
+									<ul id="tree" class="ztree" style='width:100%'>
+		
+									</ul>
+							</div>
+			        <div id='readme' style='width:70%;margin-left:20%;'>
+			          	<article class='markdown-body'>
+			            	<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f0f0f0; }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #40a070 } /* Literal.Number.Bin */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+<h1>extra practice</h1>
+
+<h2>使用oh-my-zsh</h2>
+
+<ul>
+<li>官网 http://ohmyz.sh/</li>
+<li>代码 https://github.com/robbyrussell/oh-my-zsh</li>
+</ul>
+
+<p>安装步骤</p>
+
+<ul>
+<li>先安装zsh</li>
+<li>安装oh-my-zsh</li>
+</ul>
+
+<p>以后环境变量在~/.zshrc里</p>
+
+<h2>alias</h2>
+
+<p>俗称别名，是一个linux命令</p>
+
+<p>举例：在git里面我们最常用的命令是查看状态，可以又太长</p>
+
+<p>于是</p>
+<div class="highlight"><pre><span class="vg">vi</span><span class="w"> </span><span class="o">~/.</span><span class="vg">zshrc</span>
+</pre></div>
+<p>增加如下别名定义</p>
+<div class="highlight"><pre><span class="vg">alias</span><span class="w"> </span><span class="vg">gs</span><span class="o">=</span><span class="c1">&#39;git status&#39;</span>
+</pre></div>
+<p>source使环境变量生效（如果不想重启电脑的话）</p>
+<div class="highlight"><pre><span class="vg">source</span><span class="w"> </span><span class="o">~/.</span><span class="vg">zshrc</span>
+</pre></div>
+<p>如果不理解环境变量，自己去闭门思过去</p>
+
+<p>它的作用是让长命令变短</p>
+
+<p>有个经典说法：“演进就应该像女生的裙子”</p>
+
+<h2>杀死所有nodejs相关进程</h2>
+
+<p>天天写nodejs的都有这个痛苦，起了太多实例，分不清哪个是哪个</p>
+
+<p>索性都干掉吧</p>
+<div class="highlight"><pre><span class="vg">ps</span><span class="w"> </span><span class="o">-</span><span class="vg">ef</span><span class="o">|</span><span class="vg">grep</span><span class="w"> </span><span class="vg">node</span><span class="o">|</span><span class="vg">awk</span><span class="w"> </span><span class="c1">&#39;{print $2}&#39;|xargs kill -9</span>
+</pre></div>
+<p>这是非常经典的一条命令</p>
+
+<p>说明</p>
+
+<ul>
+<li>ps -ef查看进程</li>
+<li>grep node是过滤进程里的和node相关的所有进程</li>
+<li>awk &#39;{print $2}&#39; 取出进程号</li>
+<li>xargs kill -9 杀掉该进程</li>
+</ul>
+
+<p><code>|</code>是pipe，即管道的意思：上一个的输出，是下一个的输入</p>
+
+<p>nodejs里stream和pipe是一样的概念</p>
+
+<p>如此理解变掌握了shell的精髓</p>
+
+<p>“上一个的输出，是下一个的输入，组合着用”</p>
+
+<p>每一个命令把它写到极致</p>
+
+<p>这是unix的哲学</p>
+
+<h2>命令行查找代码</h2>
+
+<p>ack是一个perl脚本，是grep的一个可选替换品。其可以对匹配字符有高亮显示。是为程序员专门设计的，默认递归搜索，省提供多种文件类型供选。</p>
+
+<p>http://beyondgrep.com/install/</p>
+
+<p>Ubuntu</p>
+
+<ul>
+<li>Package &quot;ack-grep&quot;</li>
+</ul>
+
+<p>Mac</p>
+
+<ul>
+<li>brew install ack</li>
+</ul>
+
+<p>mac下面直接用，linux记得自己alias一下</p>
+
+<p>检索文本内的key是非常高效的</p>
+<div class="highlight"><pre><span class="s-Atom">➜</span>  <span class="s-Atom">vsc</span><span class="o">-</span><span class="s-Atom">doc</span> <span class="nn">git</span><span class="p">:(</span><span class="s-Atom">master</span><span class="p">)</span> <span class="s-Atom">✗</span> <span class="s-Atom">ack</span> <span class="s-Atom">i5ting</span>
+<span class="s-Atom">extra</span><span class="p">.</span><span class="s-Atom">md</span>
+<span class="mi">72</span><span class="s-Atom">:</span><span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="s-Atom">github</span><span class="p">.</span><span class="s-Atom">com</span><span class="o">/</span><span class="s-Atom">i5ting</span><span class="o">/</span><span class="s-Atom">awesome</span><span class="o">-</span><span class="s-Atom">mac</span><span class="o">-</span><span class="s-Atom">practice2</span><span class="o">/</span><span class="s-Atom">blob</span><span class="o">/</span><span class="s-Atom">master</span><span class="o">/</span><span class="s-Atom">app</span><span class="o">/</span><span class="nv">Dash</span><span class="p">.</span><span class="s-Atom">zip?raw</span><span class="o">=</span><span class="s-Atom">true</span>
+
+<span class="s-Atom">preview</span><span class="o">/</span><span class="s-Atom">index</span><span class="p">.</span><span class="s-Atom">html</span>
+<span class="mi">434</span><span class="s-Atom">:&lt;li&gt;&lt;a</span> <span class="s-Atom">href=</span><span class="s2">&quot;http://i5ting.github.io/nodejs-video/node-inspector.mov&quot;</span><span class="o">&gt;</span><span class="s-Atom">node</span><span class="o">-</span><span class="s-Atom">inspector视频&lt;/a&gt;&lt;/li</span><span class="o">&gt;</span>
+<span class="mi">435</span><span class="s-Atom">:&lt;li&gt;&lt;a</span> <span class="s-Atom">href=</span><span class="s2">&quot;http://i5ting.github.io/nodejs-video/node-debug.mov&quot;</span><span class="o">&gt;</span><span class="s-Atom">node</span><span class="o">-</span><span class="s-Atom">debug视频&lt;/a&gt;&lt;/li</span><span class="o">&gt;</span>
+<span class="mi">525</span><span class="s-Atom">:&lt;p&gt;这其实和</span><span class="o">&lt;</span><span class="s-Atom">a</span> <span class="s-Atom">href=</span><span class="s2">&quot;http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html#10501&quot;</span><span class="o">&gt;</span><span class="s-Atom">jquery插件里的配置项&lt;/a&gt;原理是类似的&lt;/p</span><span class="o">&gt;</span>
+<span class="mi">1307</span><span class="s-Atom">:&lt;p&gt;详见</span> <span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s-Atom">i5ting</span><span class="p">.</span><span class="s-Atom">github</span><span class="p">.</span><span class="s-Atom">io</span><span class="o">/</span><span class="s-Atom">vsc</span><span class="o">-</span><span class="s-Atom">course</span><span class="o">/</span> <span class="s-Atom">&lt;/p</span><span class="o">&gt;</span>
+
+<span class="s-Atom">preview</span><span class="o">/</span><span class="nv">README</span><span class="p">.</span><span class="s-Atom">html</span>
+<span class="mi">434</span><span class="s-Atom">:&lt;li&gt;&lt;a</span> <span class="s-Atom">href=</span><span class="s2">&quot;http://i5ting.github.io/nodejs-video/node-inspector.mov&quot;</span><span class="o">&gt;</span><span class="s-Atom">node</span><span class="o">-</span><span class="s-Atom">inspector视频&lt;/a&gt;&lt;/li</span><span class="o">&gt;</span>
+<span class="mi">435</span><span class="s-Atom">:&lt;li&gt;&lt;a</span> <span class="s-Atom">href=</span><span class="s2">&quot;http://i5ting.github.io/nodejs-video/node-debug.mov&quot;</span><span class="o">&gt;</span><span class="s-Atom">node</span><span class="o">-</span><span class="s-Atom">debug视频&lt;/a&gt;&lt;/li</span><span class="o">&gt;</span>
+<span class="mi">525</span><span class="s-Atom">:&lt;p&gt;这其实和</span><span class="o">&lt;</span><span class="s-Atom">a</span> <span class="s-Atom">href=</span><span class="s2">&quot;http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html#10501&quot;</span><span class="o">&gt;</span><span class="s-Atom">jquery插件里的配置项&lt;/a&gt;原理是类似的&lt;/p</span><span class="o">&gt;</span>
+<span class="mi">1307</span><span class="s-Atom">:&lt;p&gt;详见</span> <span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s-Atom">i5ting</span><span class="p">.</span><span class="s-Atom">github</span><span class="p">.</span><span class="s-Atom">io</span><span class="o">/</span><span class="s-Atom">vsc</span><span class="o">-</span><span class="s-Atom">course</span><span class="o">/</span> <span class="s-Atom">&lt;/p</span><span class="o">&gt;</span>
+
+<span class="s-Atom">preview</span><span class="o">/</span><span class="s-Atom">toc</span><span class="o">/</span><span class="s-Atom">js</span><span class="o">/</span><span class="s-Atom">ztree_toc</span><span class="p">.</span><span class="s-Atom">js</span>
+<span class="mi">2</span><span class="s-Atom">:*</span> <span class="nn">https</span><span class="p">:</span><span class="o">//</span><span class="s-Atom">github</span><span class="p">.</span><span class="s-Atom">com</span><span class="o">/</span><span class="s-Atom">i5ting</span><span class="o">/</span><span class="s-Atom">jQuery</span><span class="p">.</span><span class="s-Atom">zTree_Toc</span><span class="p">.</span><span class="s-Atom">js</span>
+
+<span class="nv">README</span><span class="p">.</span><span class="s-Atom">md</span>
+<span class="mi">313</span><span class="p">:-</span> <span class="p">[</span><span class="s-Atom">node</span><span class="o">-</span><span class="s-Atom">inspector视频</span><span class="p">](</span><span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s-Atom">i5ting</span><span class="p">.</span><span class="s-Atom">github</span><span class="p">.</span><span class="s-Atom">io</span><span class="o">/</span><span class="s-Atom">nodejs</span><span class="o">-</span><span class="s-Atom">video</span><span class="o">/</span><span class="s-Atom">node</span><span class="o">-</span><span class="s-Atom">inspector</span><span class="p">.</span><span class="s-Atom">mov</span><span class="p">)</span>
+<span class="mi">314</span><span class="p">:-</span> <span class="p">[</span><span class="s-Atom">node</span><span class="o">-</span><span class="s-Atom">debug视频</span><span class="p">](</span><span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s-Atom">i5ting</span><span class="p">.</span><span class="s-Atom">github</span><span class="p">.</span><span class="s-Atom">io</span><span class="o">/</span><span class="s-Atom">nodejs</span><span class="o">-</span><span class="s-Atom">video</span><span class="o">/</span><span class="s-Atom">node</span><span class="o">-</span><span class="s-Atom">debug</span><span class="p">.</span><span class="s-Atom">mov</span><span class="p">)</span>
+<span class="mi">427</span><span class="s-Atom">:这其实和</span><span class="p">[</span><span class="s-Atom">jquery插件里的配置项</span><span class="p">](</span><span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s-Atom">i5ting</span><span class="p">.</span><span class="s-Atom">github</span><span class="p">.</span><span class="s-Atom">io</span><span class="o">/</span><span class="nv">How</span><span class="o">-</span><span class="s-Atom">to</span><span class="o">-</span><span class="s-Atom">write</span><span class="o">-</span><span class="s-Atom">jQuery</span><span class="o">-</span><span class="s-Atom">plugin</span><span class="o">/</span><span class="s-Atom">build</span><span class="o">/</span><span class="s-Atom">jquery</span><span class="p">.</span><span class="s-Atom">plugin</span><span class="p">.</span><span class="s-Atom">html#</span><span class="mi">10501</span><span class="p">)</span><span class="s-Atom">原理是类似的</span>
+<span class="mi">1266</span><span class="s-Atom">:详见</span> <span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s-Atom">i5ting</span><span class="p">.</span><span class="s-Atom">github</span><span class="p">.</span><span class="s-Atom">io</span><span class="o">/</span><span class="s-Atom">vsc</span><span class="o">-</span><span class="s-Atom">course</span><span class="o">/</span> 
+</pre></div>
+<p>这其实就是全文检索</p>
+
+<p>其实go写的<a href="https://github.com/junegunn/fzf">fzf</a>也很棒</p>
+
+<p>这个命令非常非常常用，尤其是阅读源码，或者特别复杂的项目里</p>
+
+<h2>查询文档神器</h2>
+
+<ul>
+<li>http://zealdocs.org/ (推荐，离线下载)</li>
+</ul>
+
+<p>有很多doc在<a href="https://github.com/i5ting/awesome-mac-practice2/blob/master/app/Dash.zip?raw=true">dash</a>（mac）里默认是没有的；</p>
+
+<p>see here ： http://kapeli.com/docset_links</p>
+
+<p>如果是下载到本地的docset，放到zealdocs目录下面，需要重启zeal</p>
+
+<ul>
+<li>linux 叫zeal</li>
+<li>mac 叫dash</li>
+</ul>
+
+<p>都是基于docset的神器</p>
+
+<p>本地文档的好处是，尽量少依赖网络，没有网也能干活，这是本事</p>
+
+<p>培养自己的独立思考能力，而不是acv的庸才</p>
+
+<h2>目录切换神器</h2>
+
+<p>autojump是一个命令行工具，它允许你可以直接跳转到你喜爱的目录，而不用管你现在身在何处。</p>
+
+<p>https://github.com/wting/autojump</p>
+
+<p>Linux</p>
+<div class="highlight"><pre><span class="vg">sudo</span><span class="w"> </span><span class="vg">apt</span><span class="o">-</span><span class="vg">get</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">autojump</span>
+</pre></div>
+<p>Mac os</p>
+<div class="highlight"><pre><span class="vg">brew</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">autojump</span>
+</pre></div>
+<p>需要修改~/.zshrc里的plugin,修改为</p>
+<div class="highlight"><pre><span class="vg">plugins</span><span class="o">=</span><span class="p">(</span><span class="vg">git</span><span class="w"> </span><span class="vg">autojump</span><span class="p">)</span>
+</pre></div>
+<p>然后</p>
+<div class="highlight"><pre><span class="vg">source</span><span class="w"> </span><span class="o">~/.</span><span class="vg">zshrc</span>
+</pre></div>
+<p>至此，已经完成了安装。</p>
+
+<p>此后cd到任意目录，以后就可以使用j这个直达到某个目录了，下面是示例：</p>
+<div class="highlight"><pre><span class="err">➜</span><span class="w">  </span><span class="vg">nodejs</span><span class="o">-</span><span class="vg">newbie</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">cd</span><span class="w"> </span><span class="o">~/</span><span class="vg">workspace</span><span class="o">/</span><span class="vg">github</span><span class="o">/</span><span class="vg">nodejs</span><span class="o">-</span><span class="vg">newbie</span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">nodejs</span><span class="o">-</span><span class="vg">newbie</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">cd</span><span class="w"> </span><span class="o">~</span>
+<span class="err">➜</span><span class="w">  </span><span class="o">~</span><span class="w">  </span><span class="vg">j</span><span class="w"> </span><span class="vg">nodejs</span><span class="o">-</span><span class="vg">n</span>
+<span class="o">/</span><span class="vg">Users</span><span class="o">/</span><span class="vg">sang</span><span class="o">/</span><span class="vg">workspace</span><span class="o">/</span><span class="vg">github</span><span class="o">/</span><span class="vg">nodejs</span><span class="o">-</span><span class="vg">newbie</span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">nodejs</span><span class="o">-</span><span class="vg">newbie</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span>
+</pre></div>
+<p>这样就会跳到上一次cd进去的目录，是不是非常方便？</p>
+
+<p>我本地有非常多的github上的项目，彼此依赖，就采用这种方式切换，省了不少脑细胞</p>
+
+<p>如果想玩的更high，可以参见https://github.com/clvv/fasd</p>
+
+<h2>根据端口号查看进程</h2>
+
+<p>nodejs写web程序，都要起一个端口，反复打开，关闭，就难免有僵尸进程，怎么也杀不掉</p>
+
+<p>只知道端口如何查看进程呢？</p>
+
+<p>lsof是系统管理/安全的工具，列出打开文件（lists openfiles）</p>
+<div class="highlight"><pre><span class="nv">$ </span>lsof -i:3005
+COMMAND   PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    <span class="m">30438</span> sang   26u  IPv6 0xd9428cd06d17f6af      0t0  TCP *:geniuslm <span class="o">(</span>LISTEN
+</pre></div>
+<p>3005是端口号</p>
+
+<p>于是衍生一下，根据端口杀进程，比如express默认是3000端口，难免有时有僵尸进程，如果直接根据端口杀死，是不是很爽？</p>
+<div class="highlight"><pre><span class="vg">lsof</span><span class="w"> </span><span class="o">-</span><span class="nl">i:</span><span class="mf">3005|</span><span class="vg">xargs</span><span class="w"> </span><span class="vg">killall</span>
+</pre></div>
+<p>全干掉，想不死都不行</p>
+
+<p>再衍生一下，能不能封装成一个nodejs模块，端口号作为参数，完成上述功能呢？</p>
+
+<p>于是有了kp</p>
+
+<p>kp is a tool for kill process by server port</p>
+
+<p>我写的一个模块，上面就是原理，下面说一下用法</p>
+<div class="highlight"><pre><span class="cp">[</span><span class="nx">sudo</span><span class="cp">]</span><span class="x">npm install -g kp</span>
+<span class="x">kp 3002</span>
+</pre></div>
+<p>https://github.com/i5ting/kp</p>
+
+<p>是不是简单实用呢？</p>
+
+<h2>mongodb客户端</h2>
+
+<p>推荐 www.robomongo.org </p>
+
+<ul>
+<li>支持win</li>
+<li>支持linux</li>
+<li>支持mac（mac10.10下中文乱码，需要robomongo v0.8.5+）</li>
+</ul>
+
+<p>这个是最好用的，但是每次启动都比较麻烦</p>
+
+<ul>
+<li>mac下面使用quicksilver或spotlit</li>
+<li>linux使用alias rogo=&#39;robomongo&#39;</li>
+</ul>
+
+<p>别名alias，有用吧，得学会偷懒</p>
+
+<h2>使用node-inspector调试Node代码</h2>
+
+<p>上面讲了vsc调试nodejs，可是如果你想了解更深的原理</p>
+
+<p>看我写的三法三例调试教程</p>
+
+<p>https://cnodejs.org/topic/5463f6e872f405c829029f7e</p>
+
+<h2>使用mongoose-cli数据库建模</h2>
+
+<p>随时随地，测试model，融合bluebird等promise库，让业务处理更简单</p>
+
+<p>https://cnodejs.org/topic/55c44f0db98f51142b367b54</p>
+
+<h2>mongo here</h2>
+
+<p>如果你同时有多个项目，它们有不同的mongodb，你会哭的，而且又是启动有特别容易出问题</p>
+
+<p>mongo here就是解决这个问题的</p>
+
+<p>当前目录启动mongodb</p>
+
+<p>在新建目录执行</p>
+<div class="highlight"><pre><span class="vg">mh</span>
+</pre></div>
+<p>它会创建tmp目录，然后日志，数据都放到tmp里。</p>
+
+<p>全局启动mongodb</p>
+<div class="highlight"><pre><span class="vg">mhg</span>
+</pre></div>
+<p>它会创建~/mongo/目录，当前用户下起mongo服务，即用户下全局共享</p>
+
+<p>https://github.com/i5ting/mongo-here</p>
+
+<p>核心原理很简单,写个shell脚本，执行命令mh的时候执行它就好了</p>
+<div class="highlight"><pre><span class="c">#! /bin/bash</span>
+
+mkdir -p tmp/db
+mkdir -p tmp/pids
+mkdir -p tmp/logs
+
+
+<span class="c"># remove lock file</span>
+<span class="o">[</span> -f tmp/db/mongod.lock <span class="o">]</span> <span class="o">&amp;&amp;</span> rm -rf tmp/db/mongod.lock
+
+touch tmp/pids/mongodb.pid
+
+<span class="c"># mongod --bind_ip 192.168.1.100 --port 27017 --dbpath tmp/db --logpath tmp/logs/mongodb.log --pidfilepath tmp/pids/mongodb.pid</span>
+nohup mongod --bind_ip 127.0.0.1 --port <span class="m">27017</span> --dbpath tmp/db --logpath tmp/logs/mongodb.log --pidfilepath tmp/pids/mongodb.pid &gt;mongod.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+</pre></div>
+<p>此处是在当前目录下面建立tmp目录，所以保证了权限等问题</p>
+
+<p>mhg其实更简单，就是在用户主目录<code>~</code>下建</p>
+
+<p>懂shell就是好，可以干很多坏事儿，是不是？</p>
+
+<h2>json editor</h2>
+
+<p>我平常经常api，大部分api都是返回json字符串，结构看起来特别恶心</p>
+
+<p>那能不能可视化呢？</p>
+<div class="highlight"><pre><span class="cp">[</span><span class="nx">sudo</span><span class="cp">]</span><span class="x"> npm install -g je</span>
+<span class="x">je</span>
+</pre></div>
+<p>详见https://github.com/i5ting/je</p>
+
+<h2>nodejs里的csv处理</h2>
+<div class="highlight"><pre><span class="cp">[</span><span class="nx">sudo</span><span class="cp">]</span><span class="x"> npm install -g j2csv</span>
+<span class="x">json2csv</span>
+</pre></div>
+<p>详见https://github.com/i5ting/json2csv</p>
+
+<p>上面给出的方案适合3000条以内的数据，受限于浏览器</p>
+
+<p>更大量的数据，需要</p>
+<div class="highlight"><pre><span class="cp">[</span><span class="nx">sudo</span><span class="cp">]</span><span class="x"> npm install -g ej</span>
+<span class="x">ej input.json output.csv</span>
+</pre></div>
+<p>https://github.com/i5ting/ej</p>
+
+<p>很多时候，实现导入导出，见</p>
+
+<p>https://github.com/i5ting/i-csv</p>
+
+<h2>upload-cli</h2>
+
+<p>服务器上有些上传、删除的工作，ssh进去之后，操作太麻烦了</p>
+
+<p>于是写了upload-cli ：a node cli tools for uploads ui</p>
+
+<p>https://github.com/i5ting/upload-cli</p>
+
+<ul>
+<li>目前已经支持通过命令行<code>uci</code>上传，可指定host</li>
+</ul>
+
+<h2>编写markdown文档</h2>
+
+<p>大部分人都有的需求</p>
+
+<ul>
+<li>生成markdown模块</li>
+<li>markdown编译成html</li>
+<li>支持table of content</li>
+<li>能够push到git pages上</li>
+</ul>
+
+<p>为了markdown toc，我写了https://github.com/i5ting/i5ting_ztree_toc</p>
+
+<p>然后写了一个nodejs模块https://github.com/i5ting/tocmd.npm，用于编译markdown，按照toc模板编译</p>
+
+<p>当然，每次发布到gitpages，我很不爽，于是使用gulp里的<code>gulp-gh-pages</code>直接自动化</p>
+
+<p>最后我想更懒点</p>
+
+<p>于是就有了https://github.com/i5ting/docto</p>
+
+<p>一条命令全部搞定</p>
+
+<h1>如何编写nodejs命令行模块？</h1>
+
+<p>上面给出的很多都是nodejs写的小工具模块，nodejs和npm的种种好处，使得nodejs开发命令行模块异常简单</p>
+
+<p>具体做法</p>
+
+<h2>创建git repo</h2>
+
+<p>github上创建即可</p>
+
+<h2>git clone到本地</h2>
+<div class="highlight"><pre><span class="vg">git</span><span class="w"> </span><span class="vg">clone</span><span class="w"> </span><span class="vg">git@github</span><span class="o">.</span><span class="nl">com:</span><span class="vg">i5ting</span><span class="o">/</span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span><span class="o">.</span><span class="vg">git</span>
+</pre></div>
+<h2>切换到项目目录</h2>
+<div class="highlight"><pre><span class="vg">cd</span><span class="w"> </span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span>
+</pre></div>
+<h2>初始化npm</h2>
+
+<p>执行</p>
+<div class="highlight"><pre><span class="vg">npm</span><span class="w"> </span><span class="vg">init</span>
+</pre></div>
+<p>一直回车，除非你真的有东西想改动，具体如下</p>
+<div class="highlight"><pre><span class="err">➜</span><span class="w">  </span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="vg">npm</span><span class="w"> </span><span class="vg">init</span>
+<span class="vg">This</span><span class="w"> </span><span class="vg">utility</span><span class="w"> </span><span class="vg">will</span><span class="w"> </span><span class="vg">walk</span><span class="w"> </span><span class="vg">you</span><span class="w"> </span><span class="vg">through</span><span class="w"> </span><span class="vg">creating</span><span class="w"> </span><span class="vg">a</span><span class="w"> </span><span class="vg">package</span><span class="o">.</span><span class="vg">json</span><span class="w"> </span><span class="vg">file</span><span class="o">.</span>
+<span class="vg">It</span><span class="w"> </span><span class="vg">only</span><span class="w"> </span><span class="vg">covers</span><span class="w"> </span><span class="vg">the</span><span class="w"> </span><span class="vg">most</span><span class="w"> </span><span class="vg">common</span><span class="w"> </span><span class="vg">items</span><span class="p">,</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">tries</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">guess</span><span class="w"> </span><span class="vg">sane</span><span class="w"> </span><span class="vg">defaults</span><span class="o">.</span>
+
+<span class="vg">See</span><span class="w"> </span><span class="err">`</span><span class="vg">npm</span><span class="w"> </span><span class="vg">help</span><span class="w"> </span><span class="vg">json</span><span class="err">`</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">definitive</span><span class="w"> </span><span class="vg">documentation</span><span class="w"> </span><span class="vg">on</span><span class="w"> </span><span class="vg">these</span><span class="w"> </span><span class="vg">fields</span>
+<span class="vg">and</span><span class="w"> </span><span class="vg">exactly</span><span class="w"> </span><span class="vg">what</span><span class="w"> </span><span class="vg">they</span><span class="w"> </span><span class="vg">do</span><span class="o">.</span>
+
+<span class="vg">Use</span><span class="w"> </span><span class="err">`</span><span class="vg">npm</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="o">&lt;</span><span class="vg">pkg</span><span class="o">&gt;</span><span class="w"> </span><span class="o">--</span><span class="vg">save</span><span class="err">`</span><span class="w"> </span><span class="vg">afterwards</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">a</span><span class="w"> </span><span class="vg">package</span><span class="w"> </span><span class="vg">and</span>
+<span class="vg">save</span><span class="w"> </span><span class="vg">it</span><span class="w"> </span><span class="vg">as</span><span class="w"> </span><span class="vg">a</span><span class="w"> </span><span class="vg">dependency</span><span class="w"> </span><span class="vg">in</span><span class="w"> </span><span class="vg">the</span><span class="w"> </span><span class="vg">package</span><span class="o">.</span><span class="vg">json</span><span class="w"> </span><span class="vg">file</span><span class="o">.</span>
+
+<span class="vg">Press</span><span class="w"> </span><span class="o">^</span><span class="vg">C</span><span class="w"> </span><span class="vg">at</span><span class="w"> </span><span class="vg">any</span><span class="w"> </span><span class="vg">time</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">quit</span><span class="o">.</span>
+<span class="nl">name:</span><span class="w"> </span><span class="p">(</span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span><span class="p">)</span><span class="w"> </span>
+<span class="nl">version:</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0.0</span><span class="p">)</span><span class="w"> </span>
+<span class="nl">description:</span><span class="w"> </span>
+<span class="vg">entry</span><span class="w"> </span><span class="nl">point:</span><span class="w"> </span><span class="p">(</span><span class="vg">index</span><span class="o">.</span><span class="vg">js</span><span class="p">)</span><span class="w"> </span>
+<span class="vg">test</span><span class="w"> </span><span class="nl">command:</span><span class="w"> </span>
+<span class="vg">git</span><span class="w"> </span><span class="nl">repository:</span><span class="w"> </span><span class="p">(</span><span class="nl">https:</span><span class="o">//</span><span class="vg">github</span><span class="o">.</span><span class="vg">com</span><span class="o">/</span><span class="vg">i5ting</span><span class="o">/</span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span><span class="o">.</span><span class="vg">git</span><span class="p">)</span><span class="w"> </span>
+<span class="nl">keywords:</span><span class="w"> </span>
+<span class="nl">author:</span><span class="w"> </span>
+<span class="nl">license:</span><span class="w"> </span><span class="p">(</span><span class="vg">ISC</span><span class="p">)</span><span class="w"> </span>
+<span class="vg">About</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">write</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="o">/</span><span class="vg">Users</span><span class="o">/</span><span class="vg">sang</span><span class="o">/</span><span class="vg">workspace</span><span class="o">/</span><span class="vg">github</span><span class="o">/</span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span><span class="o">/</span><span class="vg">package</span><span class="o">.</span><span class="nl">json:</span>
+
+<span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;node-cli-demo&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;node-cli-demo =============&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;main&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;index.js&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;</span><span class="nl">Error:</span><span class="w"> </span><span class="vg">no</span><span class="w"> </span><span class="vg">test</span><span class="w"> </span><span class="vg">specified</span><span class="o">\</span><span class="s2">&quot; &amp;&amp; exit 1&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;repository&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;git&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/i5ting/node-cli-demo.git&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;author&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;license&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ISC&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;bugs&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;url&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/i5ting/node-cli-demo/issues&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s2">&quot;homepage&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/i5ting/node-cli-demo&quot;</span>
+<span class="p">}</span>
+
+
+<span class="vg">Is</span><span class="w"> </span><span class="vg">this</span><span class="w"> </span><span class="vg">ok</span><span class="o">?</span><span class="w"> </span><span class="p">(</span><span class="vg">yes</span><span class="p">)</span><span class="w"> </span>
+<span class="err">➜</span><span class="w">  </span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span>
+</pre></div>
+<h2>创建文件</h2>
+<div class="highlight"><pre><span class="vg">mkdir</span><span class="w"> </span><span class="vg">bin</span>
+<span class="vg">mkdir</span><span class="w"> </span><span class="vg">test</span>
+
+<span class="vg">touch</span><span class="w"> </span><span class="vg">bin</span><span class="o">/</span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span><span class="o">.</span><span class="vg">js</span>
+<span class="vg">touch</span><span class="w"> </span><span class="vg">test</span><span class="o">/</span><span class="vg">node</span><span class="o">-</span><span class="vg">cli</span><span class="o">-</span><span class="vg">demo</span><span class="o">.</span><span class="vg">js</span>
+
+<span class="vg">touch</span><span class="w"> </span><span class="vg">index</span><span class="o">.</span><span class="vg">js</span>
+<span class="vg">touch</span><span class="w"> </span><span class="vg">gulpfile</span><span class="o">.</span><span class="vg">js</span>
+</pre></div>
+<h2>修改package.json</h2>
+
+<h3>命令配置（至关重要）</h3>
+<div class="highlight"><pre><span class="w">  </span><span class="s2">&quot;preferGlobal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;bin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;badge&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;bin/badge.js&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+</pre></div>
+<p>此处是关键</p>
+
+<p><code>preferGlobal</code>确定你的这个命令是不是全局的，一定要设置为true，不然不放到path里，不能全局用的。</p>
+
+<p><code>bin</code>是配置你的cli名称和具体哪个文件来执行这个的</p>
+
+<h3>scripts</h3>
+<div class="highlight"><pre><span class="w">  </span><span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;start&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;npm publish .&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot; node bin/badge.js -t js -n q &quot;</span>
+<span class="w">  </span><span class="p">},</span>
+</pre></div>
+<p>这里定义了2个命令</p>
+
+<ul>
+<li><code>npm start</code></li>
+</ul>
+
+<p>这里我用它发布当前npm到npmjs.org上</p>
+
+<ul>
+<li><code>npm test</code></li>
+</ul>
+
+<p>这里我用它作为测试代码，避免每次都重复输入</p>
+
+<h2>发布</h2>
+
+<p>发布之前要注册npmjs账户的</p>
+
+<p>npm login(只需要一次，以后就不用了)
+    npm start</p>
+
+<h2>更多</h2>
+
+<p>推荐几个解析命令行args的库</p>
+
+<ul>
+<li>commander是tj写的，一个不错的库</li>
+<li>yargs也不错，更强大，简洁</li>
+<li>ccli是我写的，封装了yargs和基本常用的库<br></li>
+</ul>
+
+<h1>如何快速阅读源码？</h1>
+
+<h2>学习5阶段</h2>
+
+<ul>
+<li>getting start 入门</li>
+<li>guide 指南</li>
+<li>doc 查api</li>
+<li>阅读源码</li>
+<li>向开源贡献代码</li>
+</ul>
+
+<h2>你该阅读源码？</h2>
+
+<p>上面已经说了，第四个阶段才是读源码</p>
+
+<p>原因是，必须熟练才有用，不然读了也白扯</p>
+
+<ul>
+<li>熟练使用该模块</li>
+<li>熟练掌握npm</li>
+<li>熟练掌握nodejs语法</li>
+</ul>
+
+<p>有了这个前提你就可以阅读了。</p>
+
+<p>当然事情也不能绝对，没这些，你也可以看，从中找出有用的写法或者学习代码规范也是好的。</p>
+
+<h2>看目录结构（express框架）</h2>
+<div class="highlight"><pre><span class="err">➜</span><span class="w">  </span><span class="vg">express</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">tree</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="o">-</span><span class="vg">L</span><span class="w"> </span><span class="il">2</span>
+<span class="o">.</span>
+<span class="err">├──</span><span class="w"> </span><span class="vg">History</span><span class="o">.</span><span class="vg">md</span>
+<span class="err">├──</span><span class="w"> </span><span class="vg">LICENSE</span>
+<span class="err">├──</span><span class="w"> </span><span class="vg">Readme</span><span class="o">.</span><span class="vg">md</span>
+<span class="err">├──</span><span class="w"> </span><span class="vg">index</span><span class="o">.</span><span class="vg">js</span>
+<span class="err">├──</span><span class="w"> </span><span class="vg">lib</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">application</span><span class="o">.</span><span class="vg">js</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">express</span><span class="o">.</span><span class="vg">js</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">middleware</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">request</span><span class="o">.</span><span class="vg">js</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">response</span><span class="o">.</span><span class="vg">js</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">router</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">utils</span><span class="o">.</span><span class="vg">js</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">└──</span><span class="w"> </span><span class="vg">view</span><span class="o">.</span><span class="vg">js</span>
+<span class="err">├──</span><span class="w"> </span><span class="vg">node_modules</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">accepts</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">array</span><span class="o">-</span><span class="vg">flatten</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">content</span><span class="o">-</span><span class="vg">disposition</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">content</span><span class="o">-</span><span class="vg">type</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">cookie</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">cookie</span><span class="o">-</span><span class="vg">signature</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">debug</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">depd</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">escape</span><span class="o">-</span><span class="vg">html</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">etag</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">finalhandler</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">fresh</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">merge</span><span class="o">-</span><span class="vg">descriptors</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">methods</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">on</span><span class="o">-</span><span class="vg">finished</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">parseurl</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">path</span><span class="o">-</span><span class="vg">to</span><span class="o">-</span><span class="vg">regexp</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">proxy</span><span class="o">-</span><span class="vg">addr</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">qs</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">range</span><span class="o">-</span><span class="vg">parser</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">send</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">serve</span><span class="o">-</span><span class="vg">static</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">type</span><span class="o">-</span><span class="vg">is</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">├──</span><span class="w"> </span><span class="vg">utils</span><span class="o">-</span><span class="vg">merge</span>
+<span class="err">│  </span><span class="w"> </span><span class="err">└──</span><span class="w"> </span><span class="vg">vary</span>
+<span class="err">└──</span><span class="w"> </span><span class="vg">package</span><span class="o">.</span><span class="vg">json</span>
+
+<span class="nl">29</span><span class="w"> </span><span class="vg">directories</span><span class="p">,</span><span class="w"> </span><span class="il">11</span><span class="w"> </span><span class="vg">files</span>
+</pre></div>
+<h3>package.json</h3>
+
+<p>这是一个npm模块</p>
+
+<ul>
+<li>dependencies</li>
+<li>devDependencies</li>
+<li>scripts</li>
+<li>bin</li>
+<li>main</li>
+<li>repository</li>
+<li>license</li>
+<li>homepage</li>
+</ul>
+
+<p>体会细节的差异</p>
+
+<h3>node_modules</h3>
+
+<p>放的是当前模块依赖的其他模块</p>
+
+<h3>index.js</h3>
+
+<p>npm有一个约定，如果你的项目主文件是index.js可以不在package.json里写明，如果是其他文件就必须写清楚</p>
+
+<p>比如shelljs里的</p>
+<div class="highlight"><pre><span class="s2">&quot;main&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;./shell.js&quot;</span><span class="p">,</span>
+</pre></div>
+<p>好了，我们继续看express的package.json，他没有定义main文件，那我们就找index.js</p>
+
+<p>程序入口</p>
+<div class="highlight"><pre><span class="cm">/*!</span>
+<span class="cm"> * express</span>
+<span class="cm"> * Copyright(c) 2009-2013 TJ Holowaychuk</span>
+<span class="cm"> * Copyright(c) 2013 Roman Shtylman</span>
+<span class="cm"> * Copyright(c) 2014-2015 Douglas Christopher Wilson</span>
+<span class="cm"> * MIT Licensed</span>
+<span class="cm"> */</span>
+
+<span class="p">&#39;</span><span class="k">use</span> <span class="n">strict</span><span class="p">&#39;;</span>
+
+<span class="k">module</span><span class="p">.</span><span class="n">exports</span> <span class="o">=</span> <span class="n">require</span><span class="p">(&#39;.</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">express</span><span class="p">&#39;);</span>
+</pre></div>
+<h3>lib</h3>
+
+<p>从index.js可知，里面的功能都写在了lib里，也就是说，这里才是最重要的战场</p>
+
+<h3>其他</h3>
+<div class="highlight"><pre><span class="err">├──</span><span class="w"> </span><span class="vg">Readme</span><span class="o">.</span><span class="vg">md</span><span class="w"> </span><span class="err">最重要的文档</span>
+<span class="err">├──</span><span class="w"> </span><span class="vg">History</span><span class="o">.</span><span class="vg">md</span><span class="w"> </span><span class="err">一般是更新历史</span>
+<span class="err">├──</span><span class="w"> </span><span class="vg">LICENSE</span><span class="w"> </span><span class="err">授权协议</span>
+</pre></div>
+<p>类似的文件写的都比较清楚，需要的时候再看不急</p>
+
+<h2>建立大局观</h2>
+
+<p>大局观有2种</p>
+
+<ul>
+<li>目录结构，npm，约定等，属于常识类</li>
+<li>代码大局观</li>
+</ul>
+
+<p>先大致看一遍，花个个把小时，一定要都看了，不求看懂，但求不放过每一个文件</p>
+
+<p>这就好比买书一样，如果头一周么有看完，这辈子这边书看完的可能性就很渺小了</p>
+
+<h3>模块阅读</h3>
+
+<ul>
+<li>根据头3步骤（入门，指南，文档）的理解，大致可以猜出一些，比如（req，res，router，view，middleware）</li>
+<li>根据文件结构，index指向lib/express,那这就是入口，看看里面组装关系，又明白一层</li>
+<li>每个文件去读，里面多少有点熟悉的东西</li>
+</ul>
+
+<h3>源码阅读</h3>
+
+<p>package.json里的files</p>
+
+<p>.npmignore</p>
+
+<ul>
+<li>先看test、benchmark、examples</li>
+<li>其他步骤同上</li>
+</ul>
+
+<h2>带着问题去探索</h2>
+
+<p>比如我想获得访问此网页人的ip</p>
+
+<h2>扒出来的都是自己的</h2>
+
+<p>从代码里学，才是最常久的，开源的东西已经足够多了</p>
+
+<p>每天打开github，看一下</p>
+
+<p>https://github.com/trending</p>
+
+<p>最近比较火的项目都有了，挑喜欢的扒一扒，肯定是有你不会的</p>
+
+<h2>贡献源码，回馈社区</h2>
+
+<p>开源是一种精神，从中受益，也要记得反馈社区，这是做程序员最基本的道德。</p>
+
+<h1>作业</h1>
+
+<h2>express调试</h2>
+
+<h2>快捷键练习</h2>
+
+<h2>自定义snippet</h2>
+
+<h2>extra练习</h2>
+
+<h2>编写一个node命令行模块</h2>
+
+<h2>阅读一个github上开源项目，写源码分析笔记</h2>
+
+<p>下周一前提交给我，sang@aircos.com，我会review，过时不候</p>
+
+<h1>致谢</h1>
+
+<p>最后感谢大家来学习，讲的主要是思路，具体做不做不是讲师能管的了的</p>
+
+<p>我希望课程能够对大家有用，在本周内学会里面的所有内容（随时可以提问）</p>
+
+<ul>
+<li>vsc快捷键会了，sublime也是通用的</li>
+<li>extra里都是比较好的实践</li>
+</ul>
+
+			          	</article>
+			        </div>
+					</div>
+	      </body>
+	    </html>
+			<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+			<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+			<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+      <script type="text/javascript" src="toc/toc_conf.js"></script>
+      
+			<SCRIPT type="text/javascript" >
+			<!--
+			$(document).ready(function(){
+          var css_conf = eval(markdown_panel_style);
+          $('#readme').css(css_conf)
+          
+          var conf = eval(jquery_ztree_toc_opts);
+  				$('#tree').ztree_toc(conf);
+
+				
+			});
+			//-->
+			</SCRIPT>
+	  

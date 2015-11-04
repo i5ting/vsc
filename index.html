@@ -164,9 +164,9 @@
 <li>跨平台支持Linux, Mac OSX, and Windows</li>
 <li>支持语法自动补全，智能提示</li>
 <li>内置html开发神器emmet</li>
-<li>速度非常快</li>
-<li>支持多主题（配色方案）</li>
-<li>- 对于其他编辑器的高效操作和快捷键都有继承</li>
+<li>速度、调试效率非常快</li>
+<li>支持多主题（配色方案）0.9.1之后更爽</li>
+<li>对于其他编辑器的高效操作和快捷键都有继承（训练习惯的时候会讲）</li>
 </ul>
 
 <h2>安装</h2>
@@ -179,6 +179,12 @@
 <p>当前目录打开vsc编辑器</p>
 <div class="highlight"><pre><span class="nv">$ </span>vsc
 </pre></div>
+<p>每次去桌面找快捷方式是非常傻的办法，终端里输入几个字母就可以搞定，又何必那么费劲呢？</p>
+
+<p>键盘一定比鼠标操作快，你还是用鼠标么？土不土？</p>
+
+<p>这个模块是nodejs写的，后面会讲</p>
+
 <h2>功能区说明</h2>
 
 <p><img src="img/1.png" alt=""></p>
@@ -191,6 +197,8 @@
 <li>Git</li>
 <li>Debug</li>
 </ol>
+
+<p>分别是文件夹，搜索，git和调试</p>
 
 <p>功能区2：二级菜单</p>
 
@@ -240,11 +248,17 @@
 <li>☺ 是意见反馈</li>
 </ul>
 
+<p>稍微点评一下，微软的界面做的还是下了功夫的，细节处理的不错</p>
+
 <p>Integrate with External Tools via Tasks</p>
 
 <p>https://code.visualstudio.com/docs/editor/tasks</p>
 
-<p>(todo)</p>
+<p>vsc还是支持各种task，Gulp, Grunt 或 Jake等</p>
+
+<p>常见的各种编译，如markdown编译成html，sass编译成css，coffee或typescript编译成js等</p>
+
+<p>当也有各种语法编码校验</p>
 
 <h2>Workbench主菜单说明</h2>
 
@@ -267,11 +281,25 @@
 
 <h3>Search</h3>
 
+<p>常见的各种搜索都支持了，很强大</p>
+
 <p><img src="img/6.png" alt=""></p>
+
+<p>如果设置快捷键cmd+2，直接定位到搜索框，输入文字后，直接回车就是全文搜索</p>
 
 <h3>Git</h3>
 
+<p>git是目前最常用的版本控制软件，推荐命令行操作，这样对原理理解的更深入，可以避免很多gui莫名其妙的问题</p>
+
+<p>vsc对它进行了抽象，提供的功能，刚刚好够用</p>
+
 <p><img src="img/7.png" alt=""></p>
+
+<p>它还有diff功能，虽然大部分时间我用命令行，但我也会用它的diff和commit的</p>
+
+<p><img src="img/18.png" alt=""></p>
+
+<p>简单明了</p>
 
 <p>下面给出一些git学习资料（如果熟悉，自动跳过）</p>
 
@@ -281,9 +309,27 @@
 <li><a href="https://git.oschina.net/wzw/git-quick-start">git入门gif演示</a></li>
 </ul>
 
+<p>要注意：vsc不提供创建git项目功能，所以需要先创建git项目，然后打开再用它编辑</p>
+
 <h3>Debug</h3>
 
-<p>使用方法也很简单,步骤如下：</p>
+<p>为什么选用vsc，一个原因就是因为调试</p>
+
+<ul>
+<li>node-inspector虽好，项目已大特别慢，这方面vsc做了不少优化</li>
+<li>tdd/bdd虽好，还不能完全实现</li>
+</ul>
+
+<p>vsc官方说</p>
+<div class="highlight"><pre><span class="vg">We</span><span class="w"> </span><span class="vg">improved</span><span class="w"> </span><span class="vg">stepping</span><span class="w"> </span><span class="vg">performance</span><span class="w"> </span><span class="vg">by</span><span class="w"> </span><span class="vg">loading</span><span class="w"> </span><span class="vg">the</span><span class="w"> </span><span class="vg">scopes</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">variables</span><span class="w"> </span>
+<span class="vg">of</span><span class="w"> </span><span class="vg">stack</span><span class="w"> </span><span class="vg">frames</span><span class="w"> </span><span class="vg">lazily</span><span class="o">.</span><span class="w"> </span><span class="vg">This</span><span class="w"> </span><span class="vg">improvement</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">based</span><span class="w"> </span><span class="vg">on</span><span class="w"> </span><span class="vg">a</span><span class="w"> </span><span class="vg">protocol</span><span class="w"> </span><span class="vg">change</span>
+<span class="vg">that</span><span class="w"> </span><span class="vg">affects</span><span class="w"> </span><span class="vg">all</span><span class="w"> </span><span class="vg">debug</span><span class="w"> </span><span class="vg">adapters</span><span class="o">.</span>
+</pre></div>
+<p>意思就是他们做了很多优化</p>
+
+<p>使用中，确实比node-inspector快很多</p>
+
+<p>vsc调试使用方法也很简单,步骤如下：</p>
 
 <ul>
 <li>打开要调试的文件，按f5,编辑器会生成一个launch.json</li>
@@ -295,11 +341,15 @@
 
 <p><img src="img/2.gif" alt=""></p>
 
-<h2>实例</h2>
+<h2>express调试实例</h2>
+
+<p>这是我们最常用的调试</p>
 
 <p>通过创建express项目构建，调试来演示vsc的具体用法</p>
 
 <h3>创建express项目</h3>
+
+<p>使用express-generator</p>
 <div class="highlight"><pre><span class="err">➜</span><span class="w">  </span><span class="vg">examples</span><span class="w"> </span><span class="nl">git:</span><span class="p">(</span><span class="vg">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="vg">express</span><span class="w"> </span><span class="vg">helloworld</span>
 
 <span class="w">   </span><span class="vg">create</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="vg">helloworld</span>
@@ -435,6 +485,8 @@
 <li><a href="http://i5ting.github.io/nodejs-video/node-debug.mov">node-debug视频</a></li>
 </ul>
 
+<p>课后作业：亲手debug一次，感受一下vsc的魅力</p>
+
 <h2>自动补全(智能提示)</h2>
 
 <p>因为之前微软推出了typescript语言，结合tsd文件，用visual studio写typescript代码是相当爽的，智能提示的功能非常nb。</p>
@@ -447,6 +499,8 @@
 
 <p>https://github.com/DefinitelyTyped/tsd</p>
 
+<p>和npm很像，有木有？</p>
+
 <p>目前主流的前端类库/框架，包括node.js及其模块/框架都有相应的tsd文件，可以去<a href="https://github.com/borisyankov/DefinitelyTyped">DefinitelyTyped</a>上找一下。</p>
 
 <p>那么就可以安装tsd之后，使用</p>
@@ -454,10 +508,12 @@
 <span class="vg">cd</span><span class="w"> </span><span class="vg">vsc</span><span class="o">-</span><span class="vg">doc</span>
 <span class="vg">tsd</span><span class="w"> </span><span class="vg">query</span><span class="w"> </span><span class="o">-</span><span class="vg">r</span><span class="w"> </span><span class="o">-</span><span class="vg">o</span><span class="w"> </span><span class="o">-</span><span class="vg">a</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">express</span>
 </pre></div>
+<p>和npm很像，有木有？</p>
+
 <p>此时看一下当前目录，下面的express.d.ts文件即是具体提示用的。</p>
 <div class="highlight"><pre><span class="vg">typings</span><span class="o">/</span><span class="vg">express</span><span class="o">/</span><span class="vg">express</span><span class="o">.</span><span class="vg">d</span><span class="o">.</span><span class="vg">ts</span>
 </pre></div>
-<p>在代码编辑区里，输入CTRL+SPACE就可以有提示了。</p>
+<p>在代码编辑区里，输入CTRL+SPACE(默认快捷键)就可以有提示了。</p>
 
 <p><img src="img/15.png" alt=""></p>
 
@@ -465,8 +521,12 @@
 
 <h2>自定义快捷键</h2>
 
+<p>上面是基本的操作，下面看点高效的使用：自定义快捷键</p>
+
 <h3>查看快捷键</h3>
-<div class="highlight"><pre><span class="vg">view</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="vg">Command</span><span class="w"> </span><span class="vg">Palette</span>
+
+<p>菜单view里找 Command Palette项</p>
+<div class="highlight"><pre><span class="vg">view</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="vg">Command</span><span class="w"> </span><span class="vg">Palette</span><span class="err">（调色板）</span>
 </pre></div>
 <p>对应的快捷键是<code>shift + command + p</code></p>
 
@@ -502,17 +562,31 @@
 </pre></div>
 <p>此时，就是输入SHIFT+SPACE就可以有提示了</p>
 
+<p>说明：key就是快捷键，command是编辑器的操作</p>
+
 <h3>Workbench主菜单快捷键</h3>
 
 <p>熟悉mac的都知道folder里的cmd+1|2|3|4切换文件夹显示，其实我们也可以使用类似的快捷键来提高工作效率</p>
+
+<p>xcode里面也是，所以command键是我最常用的快捷键</p>
+
+<p><img src="img/19.png" alt=""></p>
+
+<p>推荐配置如下，按照顺序来，好记</p>
 <div class="highlight"><pre><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cmd+1&quot;</span><span class="p">,</span><span class="w">           </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workbench.view.explorer&quot;</span><span class="w"> </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cmd+2&quot;</span><span class="p">,</span><span class="w">           </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workbench.view.search&quot;</span><span class="w"> </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cmd+3&quot;</span><span class="p">,</span><span class="w">           </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workbench.view.git&quot;</span><span class="w"> </span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cmd+4&quot;</span><span class="p">,</span><span class="w">           </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;workbench.view.debug&quot;</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
-<p>爽歪歪~~</p>
+<p>这样配置可以让大拇指最少移动，以大拇指为中心，快速切换，速度非常快</p>
 
 <h3>working files切换</h3>
+
+<p>一个编辑区里，vsc是不缓存的，毕竟是js写的，相对较弱，这其实是vsc的一个优化</p>
+
+<p>所以cmd + p 打开了文件之后，之前的文件就找不到了</p>
+
+<p>实际上都存到working files里了，只要我们切换working files即可</p>
 
 <p>mac下<code>ctrl + -</code>和<code>shift+ctrl + -</code>切换当前working files</p>
 
@@ -527,6 +601,8 @@
 <span class="k">var</span> <span class="n">opts</span> <span class="o">=</span> <span class="err">$</span><span class="p">.</span><span class="n">extend</span><span class="p">({},</span><span class="err">$</span><span class="p">.</span><span class="n">fn</span><span class="p">.</span><span class="n">tab</span><span class="p">.</span><span class="n">defaults</span><span class="p">,</span><span class="n">options</span><span class="p">);</span>
 </pre></div>
 <p>把options里的覆盖$.fn.tab.defaults。</p>
+
+<p>合并后的的配置项，再和{}合并，至少保证配置是{}</p>
 
 <h2>快捷键(默认)</h2>
 
@@ -601,6 +677,8 @@
 <li>http://docs.emmet.io/</li>
 </ul>
 
+<p>写其他语言也有这样的神奇，见后面讲的code snippets章节</p>
+
 <h2>Node API 查看</h2>
 
 <p>在写node.js代码的时候，有时会忘记某个模块中有哪些方法及其用法，经常要去官网翻一下api文档。</p>
@@ -619,6 +697,8 @@
 <p>vsc是用atom-shell(现在叫electron)写的，这玩意和node-webkit（现在叫nw.js）一样，都是把node.js和chrome结合起来的工具，所以可以这么使用。</p>
 
 <p>不过vsc使用到的node.js模块并不多，比如引用util和vm等会报错，用node-webkit就不会这样。</p>
+
+<p>更好的查看api办法是使用docset查看文档，比如zeal或dash（后面会讲）</p>
 
 <h2>缓存文件</h2>
 
@@ -754,6 +834,8 @@
 <p>见</p>
 <div class="highlight"><pre><span class="vg">User</span><span class="o">/</span><span class="vg">snippets</span><span class="o">/</span><span class="vg">javascript</span><span class="o">.</span><span class="vg">json</span>
 </pre></div>
+<p>snippets中文是代码片段，是自定义智能提示用的</p>
+
 <h3>自定义snippet</h3>
 <div class="highlight"><pre><span class="w">     </span><span class="o">//</span><span class="w"> </span><span class="vg">Place</span><span class="w"> </span><span class="vg">your</span><span class="w"> </span><span class="vg">snippets</span><span class="w"> </span><span class="vg">for</span><span class="w"> </span><span class="vg">JavaScript</span><span class="w"> </span><span class="vg">here</span><span class="o">.</span><span class="w"> </span><span class="vg">Each</span><span class="w"> </span><span class="vg">snippet</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">defined</span><span class="w"> </span><span class="vg">under</span><span class="w"> </span><span class="vg">a</span><span class="w"> </span><span class="vg">snippet</span><span class="w"> </span><span class="vg">name</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">has</span><span class="w"> </span><span class="vg">a</span><span class="w"> </span><span class="vg">prefix</span><span class="p">,</span><span class="w"> </span><span class="vg">body</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span>
 <span class="w">     </span><span class="o">//</span><span class="w"> </span><span class="vg">description</span><span class="o">.</span><span class="w"> </span><span class="vg">The</span><span class="w"> </span><span class="vg">prefix</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">what</span><span class="w"> </span><span class="vg">is</span><span class="w"> </span><span class="vg">used</span><span class="w"> </span><span class="vg">to</span><span class="w"> </span><span class="vg">trigger</span><span class="w"> </span><span class="vg">the</span><span class="w"> </span><span class="vg">snippet</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">the</span><span class="w"> </span><span class="vg">body</span><span class="w"> </span><span class="vg">will</span><span class="w"> </span><span class="vg">be</span><span class="w"> </span><span class="vg">expanded</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">inserted</span><span class="o">.</span><span class="w"> </span><span class="vg">Possible</span><span class="w"> </span><span class="vg">variables</span><span class="w"> </span><span class="nl">are:</span>
@@ -782,6 +864,8 @@
 <p>下面看一下如何在代码中使用snippet，如图</p>
 
 <p><img src="img/17.png" alt=""></p>
+
+<p>和vim、nodepad++里的录制宏类似</p>
 
 <h2>庖丁解牛code.app</h2>
 
@@ -1279,6 +1363,14 @@ terminateTree<span class="o">()</span> <span class="o">{</span>
 <li><p>Unity 支持Unity shader 文件高亮</p></li>
 <li><p>一些其他的改进和 Bug 修复。</p></li>
 </ul>
+<div class="highlight"><pre><span class="vg">npm</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="o">-</span><span class="vg">g</span><span class="w"> </span><span class="vg">yo</span>
+<span class="vg">npm</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="o">-</span><span class="vg">g</span><span class="w"> </span><span class="vg">generator</span><span class="o">-</span><span class="vg">code</span>
+<span class="vg">yo</span><span class="w"> </span><span class="vg">code</span>
+</pre></div>
+<ul>
+<li>支持更多语言着色</li>
+<li>主题</li>
+</ul>
 
 <h3>markdown preview</h3>
 
@@ -1289,13 +1381,17 @@ terminateTree<span class="o">()</span> <span class="o">{</span>
 <p>上面的命令，可以翻译一下</p>
 
 <ul>
-<li>新建split窗口</li>
-<li>讲当前markdown切换到预览模式</li>
+<li>1）新建split窗口</li>
+<li>2）讲当前markdown切换到预览模式</li>
 </ul>
+
+<p>即</p>
 <div class="highlight"><pre><span class="vg">command</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">\</span>
 <span class="vg">shift</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="vg">command</span><span class="w"> </span><span class="o">+</span><span class="vg">v</span>
 </pre></div>
 <h2>vsc在线付费培训</h2>
+
+<p>技巧网上多的是，习惯哪里有？欢迎学习</p>
 
 <p>时间1周</p>
 
