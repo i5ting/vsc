@@ -24,6 +24,8 @@ vsc的宣传语是：
 
 目前vsc已经开源了：https://github.com/Microsoft/vscode
 
+连mattn都在玩了https://github.com/mattn/vscode-openvim
+
 ## 特性
 
 - Free但不开源（目前已经开源）
