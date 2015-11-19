@@ -24,7 +24,9 @@ practice makes prefect~
 
 - 设置Workbench主菜单快捷键，然后就有了`command + 1到4`的快捷键，快速切换
 
-效率非常高
+
+
+效率非常高 
 
 ## 放大编码区
 

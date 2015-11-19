@@ -22,9 +22,11 @@ vsc的宣传语是：
 
 当然，最nice的还是写js代码了，这也是我接下来要着重介绍的功能。
 
+目前vsc已经开源了：https://github.com/Microsoft/vscode
+
 ## 特性
 
-- Free但不开源
+- Free但不开源（目前已经开源）
 - Build（构建）和 debug（调试） 现代web和云应用(尤其是JavaScript、TypeScript、C#、ASP.NET v5 和 Nodejs)
 - 跨平台支持Linux, Mac OSX, and Windows
 - 支持语法自动补全，智能提示

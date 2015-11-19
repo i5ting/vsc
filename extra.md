@@ -365,7 +365,33 @@ https://github.com/i5ting/upload-cli
 上面给出的很多都是nodejs写的小工具模块，nodejs和npm的种种好处，使得nodejs开发命令行模块异常简单
 
 
+先说一下node module的作用
+
+- 封装常见类库
+- 命令行工具
+
+nodejs这几年之所以如此快的崛起，就是因为模块编写简单，npm无比强大
+
+npm是nodejs最好的东西，常用分类
+
+- 1）命令行工具
+  - 比如express-generator
+  - 比如gulp 和grunt
+- 2）shell相关
+  - 比如kp：根据端口杀死进程
+  - 比如mongo-here：启动mongodb的简化写法
+- 3）本地服务器
+  - 比如je
+  - 比如hade
+
+用起来非常方便，虽然有在线的，但网络是一个障碍
+尤其没网的时候就不能用，非常郁闷
+
 具体做法
+
+无论如何，它都值得你一学的
+
+下面看一下如何编写nodejs命令行模块
 
 ## 创建git repo
 
@@ -380,6 +406,9 @@ github上创建即可
 	cd node-cli-demo
 
 ## 初始化npm
+
+使用npm命令，初始化npm的配置文件package.json
+
 
 执行
 
@@ -448,6 +477,20 @@ Is this ok? (yes)
 	touch index.js
 	touch gulpfile.js
 
+
+bin是可执行文件
+
+test是放测试文件的目录
+
+lib是模块的核心代码目录，一般是index.js找lib/xxx.js
+
+
+
+ #!/usr/bin/env node
+
+ console.log('hello node module')
+ 
+ 
 ## 修改package.json
 
 ### 命令配置（至关重要）
@@ -492,14 +535,22 @@ Is this ok? (yes)
   npm login(只需要一次，以后就不用了)
 	npm start
 
+
+当然更多的时候，我们看到的命令是这样
+
+➜  vsc-doc git:(master) ✗ cp --help
+cp: illegal option -- -
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file
+       cp [-R [-H | -L | -P]] [
 ## 更多
 
 推荐几个解析命令行args的库
 
-- commander是tj写的，一个不错的库
-- yargs也不错，更强大，简洁
+- commander是tj写的，一个不错的库，目前用的最多的库
+- yargs也不错，更强大，简洁，官方推荐
 - ccli是我写的，封装了yargs和基本常用的库	
 
+还有私有模块
 
 # 如何快速阅读源码？
 
