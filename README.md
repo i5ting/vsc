@@ -38,6 +38,18 @@ vsc的宣传语是：
 - 对于其他编辑器的高效操作和快捷键都有继承（训练习惯的时候会讲）
 - 插件系统
 
+## 系统要求
+
+- Ubuntu Desktop 14.04
+- OS X Yosemite
+- Windows 8.0, 8.1 and 10 (x86 and x64)
+
+另外 Linux 还需要额外的
+
+- GLIBCXX version 3.4.15 or later
+- GLIBC version 2.15 or later
+
+
 ## 安装
 
 从 https://code.visualstudio.com/ 下载对应平台的安装文件，安装即可。
@@ -1235,6 +1247,8 @@ done
 todo
 
 ## FAQ
+
+官方[FAQ](https://code.visualstudio.com/docs/supporting/faq)
 
 ### 如何添加git地址？
 
