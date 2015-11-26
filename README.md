@@ -22,9 +22,13 @@ vsc的宣传语是：
 
 当然，最nice的还是写js代码了，这也是我接下来要着重介绍的功能。
 
-目前vsc已经开源了：https://github.com/Microsoft/vscode
+目前vsc已经开源了：
+
+- 代码https://github.com/Microsoft/vscode
+- 官方博客http://blogs.msdn.com/b/vscode/?Redirected=true
 
 连mattn都在玩了https://github.com/mattn/vscode-openvim
+
 
 ## 特性
 
