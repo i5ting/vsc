@@ -26,6 +26,7 @@ vsc的宣传语是：
 
 - 代码https://github.com/Microsoft/vscode
 - 官方博客http://blogs.msdn.com/b/vscode/?Redirected=true
+- roadmap https://github.com/Microsoft/vscode/wiki/Roadmap
 
 连mattn都在玩了https://github.com/mattn/vscode-openvim
 
