@@ -6,7 +6,8 @@
 
 - vsc是一个比较潮比较新的编辑器（跨平台Mac OS X、Windows和 Linux ）
 - vsc功能和textmate、sublime、notepad++，ultraedit等比较，毫不逊色
-- vsc尤其是在nodejs（调试）和typescript上支持尤其好
+- vsc尤其是在nodejs（调试）和typescript、go上支持尤其好
+- vsc提供了自定义 Debugger Adapter 和 VSCode Debug Protocol 从而实现自己的调试器
 
 值得一学，目前在我的团队内部已经大面积推广，反馈不错
 
@@ -1254,6 +1255,16 @@ https://marketplace.visualstudio.com/#VSCode
 
 todo
 
+## 调试协议
+
+VS Code 把 NodeJS 和 Mono 的调试功能抽象出来了，大家就可以通过自定义 Debugger Adapter 和 VSCode Debug Protocol 从而实现自己的调试器。现在 VS Code 插件中心 里，Go、PHP、Python、Ruby 的 Debugger 做的都比较成熟了
+
+参见
+
+https://code.visualstudio.com/Docs/extensions/example-debuggers
+
+如果你也想自己实现一个Debugger，可以参考
+
 ## FAQ
 
 官方[FAQ](https://code.visualstudio.com/docs/supporting/faq)
@@ -1307,6 +1318,11 @@ git checkout dev
 npm install jsf -g
 jsf
 ```
+
+### 可以折叠代码了么？
+
+0.10.11之后都可以的
+
 
 ### 图片没有路径选择提示么？
 
