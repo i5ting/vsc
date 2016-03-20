@@ -28,6 +28,7 @@ vsc的宣传语是：
 - 代码https://github.com/Microsoft/vscode
 - 官方博客http://blogs.msdn.com/b/vscode/?Redirected=true
 - roadmap https://github.com/Microsoft/vscode/wiki/Roadmap
+- 支持go语言 https://github.com/Microsoft/vscode-go
 
 连mattn都在玩了https://github.com/mattn/vscode-openvim
 
@@ -1254,6 +1255,12 @@ https://marketplace.visualstudio.com/#VSCode
 
 
 todo
+
+## 扩展
+
+- [vscode-react-native](https://github.com/Microsoft/vscode-react-native)
+- [vscode-go](https://github.com/Microsoft/vscode-go)
+
 
 ## 调试协议
 
