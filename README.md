@@ -1253,6 +1253,25 @@ done
 
 https://marketplace.visualstudio.com/#VSCode
 
+## 设置项
+
+
+### 字符警戒线wrappingColumn
+
+也可以叫自动换行，一般建议是80
+
+```
+	// Controls after how many characters the editor will wrap to the next line. Setting this to 0 turns on viewport width wrapping
+	"editor.wrappingColumn": 80,
+```
+
+###  wrappingIndent
+
+```
+	// Controls the indentation of wrapped lines. Can be one of 'none', 'same' or 'indent'.
+	"editor.wrappingIndent": "same",
+```
+
 
 todo
 
