@@ -1253,6 +1253,11 @@ done
 
 https://marketplace.visualstudio.com/#VSCode
 
+
+Node.js插件支持
+
+- https://github.com/SamVerschueren/vscode-ava
+
 ## 设置项
 
 
@@ -1279,6 +1284,7 @@ todo
 
 - [vscode-react-native](https://github.com/Microsoft/vscode-react-native)
 - [vscode-go](https://github.com/Microsoft/vscode-go)
+
 
 
 ## 调试协议
