@@ -1277,6 +1277,18 @@ Node.js插件支持
 	"editor.wrappingIndent": "same",
 ```
 
+### 语言协议
+
+vscode 1.0升级了，变成了中文版本，如果想改回英文版的，步骤如下：
+
+```
+cmd + shift + p
+```
+
+输入 "语言"
+选择“配置语言”，进入修改。
+
+支持的语言列表：http://go.microsoft.com/fwlink/?LinkId=761051
 
 todo
 
