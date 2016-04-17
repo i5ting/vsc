@@ -389,7 +389,7 @@ curl http://127.0.0.1:3200/
 
 这个功能理所应当也被vsc继承了。
 
-vsc的自动补全用的是tsd。
+vsc的自动补全用的是typings。
 
 TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.
 
@@ -403,9 +403,9 @@ https://github.com/DefinitelyTyped/tsd
 那么就可以安装tsd之后，使用
 
 ```
-npm install tsd -g
+npm install typings --global
 cd vsc-doc
-tsd query -r -o -a install express
+typings install node express --ambient --save
 ```
 
 和npm很像，有木有？
@@ -421,7 +421,7 @@ typings/express/express.d.ts
 
 ![](img/15.png)
 
-目前node.d.ts版本还是0.12.0，和node v4的api差不了多少
+目前node.d.ts版本还是0.12.0，和node v4的api差不了多少（最新的已经是4.x了）
 
 ## 自定义快捷键
 
@@ -1382,7 +1382,7 @@ jsf
 在package.json的目录里
 
 ```
-tsd install node
+typings install node --ambient --save
 ```
 
 然后在app.js文件上增加注释，引用typings，然后就有代码提示了
@@ -1402,6 +1402,16 @@ http.cr
 
 
 You can also hit CTRL+SPACE and get intellisense.
+
+### 为什么不用tsd了？
+
+https://github.com/DefinitelyTyped/tsd
+
+官方说
+
+```
+DEPRECATED: TSD is deprecated, please use Typings and see this issue for more information.
+```
 
 
 ## 结语
