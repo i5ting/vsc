@@ -391,16 +391,16 @@ curl http://127.0.0.1:3200/
 
 vsc的自动补全用的是typings。
 
-TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.
+The TypeScript Definition Manager（之前的tsd已经弃用了，faq里有说明）
 
-https://github.com/DefinitelyTyped/tsd
+https://github.com/typings/typings
 
 和npm很像，有木有？
 
-目前主流的前端类库/框架，包括node.js及其模块/框架都有相应的tsd文件，可以去[DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped)上找一下。
+目前主流的前端类库/框架，包括node.js及其模块/框架都有相应的tsd文件，可以去[typings](https://github.com/typings/registry)上找一下。
 
 
-那么就可以安装tsd之后，使用
+那么就可以安装typings之后，使用
 
 ```
 npm install typings --global
