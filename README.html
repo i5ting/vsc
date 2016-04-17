@@ -521,20 +521,20 @@
 
 <p>这个功能理所应当也被vsc继承了。</p>
 
-<p>vsc的自动补全用的是tsd。</p>
+<p>vsc的自动补全用的是typings。</p>
 
-<p>TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.</p>
+<p>The TypeScript Definition Manager（之前的tsd已经弃用了，faq里有说明）</p>
 
-<p>https://github.com/DefinitelyTyped/tsd</p>
+<p>https://github.com/typings/typings</p>
 
 <p>和npm很像，有木有？</p>
 
-<p>目前主流的前端类库/框架，包括node.js及其模块/框架都有相应的tsd文件，可以去<a href="https://github.com/borisyankov/DefinitelyTyped">DefinitelyTyped</a>上找一下。</p>
+<p>目前主流的前端类库/框架，包括node.js及其模块/框架都有相应的tsd文件，可以去<a href="https://github.com/typings/registry">typings</a>上找一下。</p>
 
-<p>那么就可以安装tsd之后，使用</p>
-<div class="highlight"><pre><span class="vg">npm</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">tsd</span><span class="w"> </span><span class="o">-</span><span class="vg">g</span>
+<p>那么就可以安装typings之后，使用</p>
+<div class="highlight"><pre><span class="vg">npm</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">typings</span><span class="w"> </span><span class="o">--</span><span class="vg">global</span>
 <span class="vg">cd</span><span class="w"> </span><span class="vg">vsc</span><span class="o">-</span><span class="vg">doc</span>
-<span class="vg">tsd</span><span class="w"> </span><span class="vg">query</span><span class="w"> </span><span class="o">-</span><span class="vg">r</span><span class="w"> </span><span class="o">-</span><span class="vg">o</span><span class="w"> </span><span class="o">-</span><span class="vg">a</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">express</span>
+<span class="vg">typings</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">node</span><span class="w"> </span><span class="vg">express</span><span class="w"> </span><span class="o">--</span><span class="vg">ambient</span><span class="w"> </span><span class="o">--</span><span class="vg">save</span>
 </pre></div>
 <p>和npm很像，有木有？</p>
 
@@ -545,7 +545,7 @@
 
 <p><img src="img/15.png" alt=""></p>
 
-<p>目前node.d.ts版本还是0.12.0，和node v4的api差不了多少</p>
+<p>目前node.d.ts版本还是0.12.0，和node v4的api差不了多少（最新的已经是4.x了）</p>
 
 <h2>自定义快捷键</h2>
 
@@ -1424,7 +1424,7 @@ terminateTree<span class="o">()</span> <span class="o">{</span>
 <h3>为什么没有代码提示？</h3>
 
 <p>在package.json的目录里</p>
-<div class="highlight"><pre><span class="vg">tsd</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">node</span>
+<div class="highlight"><pre><span class="vg">typings</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">node</span><span class="w"> </span><span class="o">--</span><span class="vg">ambient</span><span class="w"> </span><span class="o">--</span><span class="vg">save</span>
 </pre></div>
 <p>然后在app.js文件上增加注释，引用typings，然后就有代码提示了</p>
 <div class="highlight"><pre><span class="c1">/// &lt;reference path=&quot;typings/node/node.d.ts&quot;/&gt;</span>
@@ -1440,6 +1440,13 @@ terminateTree<span class="o">()</span> <span class="o">{</span>
 
 <p>You can also hit CTRL+SPACE and get intellisense.</p>
 
+<h3>为什么不用tsd了？</h3>
+
+<p>https://github.com/DefinitelyTyped/tsd</p>
+
+<p>官方说</p>
+<div class="highlight"><pre><span class="n">DEPRECATED</span><span class="o">:</span> <span class="n">TSD</span> <span class="k">is</span> <span class="n">deprecated</span><span class="o">,</span> <span class="n">please</span> <span class="n">use</span> <span class="n">Typings</span> <span class="n">and</span> <span class="n">see</span> <span class="k">this</span> <span class="n">issue</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+</pre></div>
 <h2>结语</h2>
 
 <p>vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。</p>
