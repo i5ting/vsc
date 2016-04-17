@@ -1421,6 +1421,23 @@ terminateTree<span class="o">()</span> <span class="o">{</span>
 
 <p>后缀名为“jsx&quot;,或者你把语言设为&quot;javascript react&quot;</p>
 
+<h3>为什么没有代码提示？</h3>
+
+<p>在package.json的目录里</p>
+<div class="highlight"><pre><span class="vg">tsd</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="vg">node</span>
+</pre></div>
+<p>然后在app.js文件上增加注释，引用typings，然后就有代码提示了</p>
+<div class="highlight"><pre><span class="c1">/// &lt;reference path=&quot;typings/node/node.d.ts&quot;/&gt;</span>
+
+<span class="k">var</span> <span class="n">http</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s">&quot;http&quot;</span><span class="p">)</span>
+
+<span class="c1">// http.</span>
+<span class="n">http</span><span class="p">.</span><span class="n">cr</span>
+</pre></div>
+<p>具体如下</p>
+
+<p><img src="img/intellisense.png" alt="Intellisense"></p>
+
 <h2>结语</h2>
 
 <p>vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。</p>
