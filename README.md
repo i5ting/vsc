@@ -1401,6 +1401,9 @@ http.cr
 ![Intellisense](img/intellisense.png)
 
 
+You can also hit CTRL+SPACE and get intellisense.
+
+
 ## 结语
 
 vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。
@@ -1456,6 +1459,10 @@ yo code
 command + \
 shift + command +v
 ```
+
+## 推荐资料
+
+- http://johnpapa.net/intellisense-witha-visual-studio-code/
 
 ## vsc在线付费培训
 
