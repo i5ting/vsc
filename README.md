@@ -554,6 +554,20 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 - 所有文档里搜索 `shift + command + -`
 - `shift + opt + f`格式化
 
+## 配置文件
+
+### jsconfig.json
+
+最新的1.0版本，右下角会有个💡提示创建jsconfig.json
+
+jsconfog.json要和typings在同级目录
+
+详见 https://code.visualstudio.com/Docs/languages/javascript
+
+
+### tsconfig.json
+
+TODO: 稍后不出
 ## 语音控制
 
 fn fn
@@ -1402,6 +1416,9 @@ http.cr
 
 
 You can also hit CTRL+SPACE and get intellisense.
+
+如果是反复改后，还是不能提示（我是好使后，我删除了jscongfig.json，之后vsc就一直没有提示了，无论如何操作），请重启
+
 
 ### 为什么不用tsd了？
 
