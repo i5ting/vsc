@@ -1377,6 +1377,29 @@ jsf
 
 后缀名为“jsx",或者你把语言设为"javascript react"
 
+### 为什么没有代码提示？
+
+在package.json的目录里
+
+```
+tsd install node
+```
+
+然后在app.js文件上增加注释，引用typings，然后就有代码提示了
+
+```
+/// <reference path="typings/node/node.d.ts"/>
+
+var http = require("http")
+
+// http.
+http.cr
+```
+
+具体如下
+
+![Intellisense](img/intellisense.png)
+
 
 ## 结语
 
