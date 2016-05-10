@@ -1,6 +1,6 @@
 # visual studio code
 
-[Visual Studio Code](https://code.visualstudio.com/)（以下简称vsc）最近更新到了0.9.2版本
+[Visual Studio Code](https://code.visualstudio.com/)（以下简称vsc）最近更新到了v1.1.0版本
 
 ![](img/0.png)
 
@@ -1431,21 +1431,13 @@ https://github.com/DefinitelyTyped/tsd
 DEPRECATED: TSD is deprecated, please use Typings and see this issue for more information.
 ```
 
-
-## 结语
-
-vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。
-
-推荐使用~
+## 版本更新说明
 
 
-## TODO
+###  0.9.1
 
-- 0.8.1
-- VS Code v0.9.1 (October 2015) https://code.visualstudio.com/updates#VSCode
-
-
-0.9.1主要的改进有：
+VS Code v0.9.1 (October 2015) https://code.visualstudio.com/updates#VSCode
+主要的改进有：
 
 - 支持本地的持久自定义位置
   - Windows %USERPROFILE%\.vscode\extensions
@@ -1469,7 +1461,7 @@ yo code
 - 支持更多语言着色
 - 主题
 
-### markdown preview
+markdown preview
 
 0.9+开始增加了markdown预览功能，试用了一下，还是非常不错得
 
@@ -1487,6 +1479,38 @@ yo code
 command + \
 shift + command +v
 ```
+
+### 1.1.0 (April 2016)
+
+The April 1.1.0 release is our first monthly release after announcing 1.0. We have been overwhelmed by the positive response to that release and the excitement in the community for VS Code and the rapidly growing ecosystem of new languages and extensions.
+
+Keeping to our monthly release cadence, we've put together a nice selection of new features and fixes in April. We hope you enjoy it.
+
+Here is an overview of some of the updates contained in this release:
+
+主要改进点：
+
+- 双击编辑器可以改变大小
+- 调试性能提升和对Node.js更好的支持 
+- 外部shell调用配置
+
+扩展作者会尤其喜欢这个版本，理由如下：
+
+- 更新了语言Server协议
+- 增加调试适配器测试支持
+- 增加非常多的新的API，如打开文件夹，增加JSON模式验证，调试时操作
+
+
+## 结语
+
+vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。
+
+推荐使用~
+
+
+## TODO
+
+
 
 ## 推荐资料
 
