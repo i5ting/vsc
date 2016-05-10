@@ -535,6 +535,7 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 - 放大 command + =
 - 缩小 command + -
 - 插入表情 ctrl + command + space
+- 列编辑 alt + shift 然后使用鼠标点选即可，也算是比较实用
 
 搜索
 
