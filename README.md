@@ -1493,6 +1493,10 @@ Here is an overview of some of the updates contained in this release:
 - 双击编辑器可以改变大小
 - 调试性能提升和对Node.js更好的支持 
 - 外部shell调用配置
+- Reopen the last closed file using ⇧⌘T
+- Quickly resize panes by double-clicking editor borders
+- Launch your favorite shell when opening a new Terminal from the Explorer or Command Palette
+
 
 扩展作者会尤其喜欢这个版本，理由如下：
 
@@ -1500,6 +1504,39 @@ Here is an overview of some of the updates contained in this release:
 - 增加调试适配器测试支持
 - 增加非常多的新的API，如打开文件夹，增加JSON模式验证，调试时操作
 
+other
+
+- Visual design for editor tabs 下一个里程碑就会实现了
+- Disable automatic revealing of files in the explorer
+- Reopen closed file command
+- Disable Emmet abbreviation expansion on Tab
+- 调试
+  - Call Stack Paging分页
+  - Improved thread support
+- Node.js调试
+  - Support for ES6 Sets, Maps, and Generators
+  - Support for property getters
+  - String truncation limit lifted
+  - Improved performance with large data structures in Node.js 4.x, 5.x
+  - Smart code stepping
+  
+  
+设置改进
+
+- 据说支持了 ./bin/code 命令行，但mac下测试不好用
+- Launch your preferred shell（mac下面还没支持）
+
+Language Server Protocol
+
+Version 2.x of the language server protocol was released together with a corresponding client library to be used in extensions and a server library for Node.js.
+
+The major changes are:
+
+- Alignment of the protocol with the VS Code extension API.
+- Consistent support for language identifiers. This means that the language ID - is passed to the server via the open notification.
+- Support for version numbers on documents.
+- Text document save notifications.
+- Support for request cancellation.
 
 ## 结语
 
