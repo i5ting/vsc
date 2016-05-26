@@ -1,0 +1,14 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+	{ "key": "ctrl+f12",                   "command": "editor.action.goToDeclaration",
+                                     "when": "editorTextFocus" },
+	{ "key": "shift+space",            "command": "editor.action.triggerSuggest",
+                                     "when": "editorTextFocus" },
+	{ "key": "cmd+1",           "command": "workbench.view.explorer" },
+	{ "key": "cmd+2",           "command": "workbench.view.search" },
+	{ "key": "cmd+3",           "command": "workbench.view.git" },
+	{ "key": "cmd+4",           "command": "workbench.view.debug" },
+	{ "key": "f9",                   "command": "workbench.action.debug.stepOver",
+                                     "when": "inDebugMode" },
+	{ "key": "ctrl+g",                "command": "workbench.action.gotoLine" }
+]
