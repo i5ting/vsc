@@ -56,6 +56,11 @@ vsc的宣传语是：
 - GLIBCXX version 3.4.15 or later
 - GLIBC version 2.15 or later
 
+## 版本说明
+
+- [标准版](https://code.visualstudio.com/Download): automatic updates on by default
+- [Insiders Build](https://code.visualstudio.com/insiders)：subscribe to what we called the “Insiders Channel” which gave you get early access to monthly drops, letting you check out new features, test an extension, or even help us find that last-minute show stopper issue.
+
 
 ## 安装
 
@@ -1545,7 +1550,11 @@ vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还
 推荐使用~
 
 
-## TODO
+## 开发相关
+
+### 迭代计划
+
+https://github.com/Microsoft/vscode/issues?utf8=%E2%9C%93&q=label%3Aiteration-plan+
 
 
 
