@@ -561,7 +561,7 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 - 所有文档里搜索 `shift + command + -`
 - `shift + opt + f`格式化
 - 跳转行 command + l（保持和textmate一致）
-- `ctrl + ~`打开terminal （v1.2新增功能）
+- `ctrl + ~`打开或关闭terminal （v1.2新增功能）
 
 具体配置见[keyboard.json](./keyboard.json)
 
