@@ -1562,6 +1562,20 @@ vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还
 https://github.com/Microsoft/vscode/issues?utf8=%E2%9C%93&q=label%3Aiteration-plan+
 
 
+## 插件推荐
+
+### wallabyjs
+
+Intelligent and super fast test runner for JavaScript/TypeScript/CoffeeScript.
+
+https://wallabyjs.com/
+
+```
+ext install wallaby-vscode
+```
+
+![](http://wallabyjs.com/assets/img/vsc.gif)
+
 
 ## 推荐资料
 
