@@ -1548,6 +1548,10 @@ The major changes are:
 - Text document save notifications.
 - Support for request cancellation.
 
+### 1.3
+
+支持tab了
+
 ## 结语
 
 vsc和其他编辑器（sublime text,atom,webstorm等）相比，某些方面还存在很多问题。对于一个前端工程师来说，它已经足够好了。
