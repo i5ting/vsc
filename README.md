@@ -1550,7 +1550,18 @@ The major changes are:
 
 ### 1.3
 
-支持tab了
+支持tab了，当前打开的tab编辑，option + command + tab。另外一大变更就是增加插件，1级左侧变成了5大功能。
+
+
+- Tabs: Tabbed editor panes allow you to quickly navigate to your files and organize your workbench.
+- Extensions: New in-product Extensions View to quickly find, install and manage your extensions.
+- Workbench: Enhanced Drag and Drop, Preview Editors to conserve your editor panes, and multiple Integrated Terminals.
+- Editor: Global Search and Replace, Indent Guides, Problems panel to view errors and warnings.
+- Languages: Better, more complete Emmet support, Atom JavaScript grammar extension.
+- Debugging: Lots of improvements including support for attaching to running Node.js processes and changing variable values during a debug session.
+- Extension Authoring: A new contribution point for menu bars and context menus. New APIs to open non-text resources and add editor decorator attachments.
+
+
 
 ## 结语
 
