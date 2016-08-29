@@ -410,7 +410,8 @@ https://github.com/typings/typings
 ```
 npm install typings --global
 cd vsc-doc
-typings install node express --ambient --save
+typings install dt~node --global --save
+typings install express --ambient --save
 ```
 
 和npm很像，有木有？
