@@ -495,10 +495,11 @@ xcode里面也是，所以command键是我最常用的快捷键
 推荐配置如下，按照顺序来，好记
 
 ```
-	{ "key": "cmd+1",           "command": "workbench.view.explorer" },
-	{ "key": "cmd+2",           "command": "workbench.view.search" },
-	{ "key": "cmd+3",           "command": "workbench.view.git" },
-	{ "key": "cmd+4",           "command": "workbench.view.debug" }
+{ "key": "cmd+1",           "command": "workbench.view.explorer" },
+{ "key": "cmd+2",           "command": "workbench.view.search" },
+{ "key": "cmd+3",           "command": "workbench.view.git" },
+{ "key": "cmd+4",           "command": "workbench.view.debug" },
+{ "key": "cmd+5",           "command": "workbench.view.extensions" }
 ```
 
 这样配置可以让大拇指最少移动，以大拇指为中心，快速切换，速度非常快
