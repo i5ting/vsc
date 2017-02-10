@@ -64,6 +64,13 @@ vsc的宣传语是：
 
 ## 安装
 
+VSCode内置了一个code命令可以在命令行下打开文件（推荐）
+
+![Code](img/code.png)
+
+
+如果低版本的，可以考虑用coden来处理。
+
 从 https://code.visualstudio.com/ 下载对应平台的安装文件，安装即可。
 
 如果是mac系统，加简单的命令行
