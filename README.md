@@ -576,6 +576,22 @@ var opts = $.extend({},$.fn.tab.defaults,options);
 
 ## 配置文件
 
+### 配置iconTheme
+
+```
+{
+    "workbench.iconTheme": "vscode-icons",
+}
+```
+
+### 开启minimap
+
+```
+{
+     "editor.minimap.enabled": true
+}
+```
+
 ### jsconfig.json
 
 最新的1.0版本，右下角会有个💡提示创建jsconfig.json
