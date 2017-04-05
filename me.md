@@ -1,4 +1,4 @@
-大家好，我是桑世龙，github和cnodejs上的i5ting，目前在天津创业，空弦科技cto，公司目前使用技术主要是nodejs，moajs作者，
+大家好，我是桑世龙，github和cnodejs上的i5ting，曾经在天津创业，被坑的cto，公司目前使用技术主要是nodejs，moajs作者，
 技术栈算所谓的MEAN（mongodb  + express + angular + node），所有代码都部署在阿里云上
 
 曾在新浪，网秦等工作过
