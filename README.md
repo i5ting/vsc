@@ -851,6 +851,12 @@ snippets中文是代码片段，是自定义智能提示用的
 
 和vim、nodepad++里的录制宏类似
 
+另外editor.snippetSuggestions默认是bottom，可以改成top
+
+```
+"editor.snippetSuggestions": "top"
+```
+
 ## 庖丁解牛code.app
 
 - electron 打包成可执行文件
