@@ -504,7 +504,7 @@ xcode里面也是，所以command键是我最常用的快捷键
 ```
 { "key": "cmd+1",           "command": "workbench.view.explorer" },
 { "key": "cmd+2",           "command": "workbench.view.search" },
-{ "key": "cmd+3",           "command": "workbench.view.git" },
+{ "key": "cmd+3",           "command": "workbench.view.scm" },
 { "key": "cmd+4",           "command": "workbench.view.debug" },
 { "key": "cmd+5",           "command": "workbench.view.extensions" }
 ```
